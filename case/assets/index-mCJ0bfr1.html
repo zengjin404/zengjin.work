@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>html svg动画水面小船</title>
+		<link rel="stylesheet" href="./style.css" />
+		<!-- 小船样式错乱, 先保留水面 -->
+	</head>
+	<body>
+		<!-- partial:index.partial.html -->
+		<div class="container">
+			<div id="sky">
+				<!-- <div class="cloud"></div>
+				<div class="cloud"></div> -->
+			</div>
+			<div id="ocean">
+				<!-- <div id="boat-container">
+					<div id="boat">
+						<div id="shadow-right"></div>
+						<div id="rim-left"></div>
+						<div id="rim-right"></div>
+						<div id="luggage-right"></div>
+						<div id="luggage-right-shadow"></div>
+						<div id="luggage-left"></div>
+						<div id="luggage-left-shadow"></div>
+					</div>
+					<div id="sailor"></div>
+					<div id="sailor-arm-left"></div>
+					<div id="sailor-arm-right"></div>
+					<span class="sailor-eye"></span><span class="sailor-eye"></span>
+					<div id="sailor-cap"></div>
+					<div id="rim"></div>
+				</div> -->
+				<svg
+					class="waves"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					viewbox="0 24 150 28"
+					preserveaspectratio="none"
+					shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(155, 220, 251, 0.7"></use>
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(129, 204, 250,0.5)"></use>
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(184, 236, 253, 1)"></use>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+import{_ as s,$ as a,A as t,o as n,c as o,d as r,b as c}from"./index-BOUM_9ip.js";const _={__name:"index",setup(d){return a({}),t(),n(()=>{}),(l,e)=>(c(),o("section",null,e[0]||(e[0]=[r("iframe",{src:"/case/pages/动画效果/藤蔓/index.html"},null,-1)])))}},i=s(_,[["__scopeId","data-v-188b963c"]]);export{i as default};
