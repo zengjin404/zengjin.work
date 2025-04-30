@@ -1,0 +1,1 @@
+import{P as r}from"./Precode-ecuEBr2U.js";import{M as a}from"./Mars3d-BEQzeg_F.js";import{a as s,c as o,f as e,F as t}from"./index-nc9jXHou.js";const l={__name:"初始化",setup(c){return(m,n)=>(s(),o(t,null,[e(a),e(r,{url:"/gis/pages/mars3d/初始化.vue,/src/components/Mars3d.vue"})],64))}};export{l as default};

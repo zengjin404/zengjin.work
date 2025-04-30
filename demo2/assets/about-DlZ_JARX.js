@@ -1,0 +1,1 @@
+import{c as n,a,F as r,o as s,u}from"./index-D7YICr3h.js";const k={__name:"about",setup(c){const e=u(),o=()=>{e.back()};return(l,t)=>(s(),n(r,null,[t[0]||(t[0]=a("h2",null,"about",-1)),a("button",{onClick:o},"back")],64))}};export{k as default};

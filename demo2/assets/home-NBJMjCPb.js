@@ -1,0 +1,1 @@
+import{c as s,a as t,F as u,o as a,u as n}from"./index-D7YICr3h.js";const c={__name:"home",setup(m){const e=n(),r=()=>{e.push("/about")};return(l,o)=>(a(),s(u,null,[o[0]||(o[0]=t("h2",null,"home",-1)),t("button",{onClick:r},"go about"),o[1]||(o[1]=t("a",{href:"/demo1/"},"to demo1",-1))],64))}};export{c as default};

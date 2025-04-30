@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>API 文档 | api.zengjin.work</title>
+		<link rel="stylesheet" href="/$base/plugin/swagger-ui-5.20.1/swagger-ui.css" />
+		<script src="/$base/plugin/swagger-ui-5.20.1/swagger-ui-bundle.js"></script>
+		<script src="/$base/plugin/swagger-ui-5.20.1/swagger-ui-standalone-preset.js"></script>
+		<style>
+			body {
+				margin: 0;
+				font-size: 14px;
+				overflow-x: hidden;
+
+				/* min-height: 100vh; */
+				/* background: no-repeat center / cover; */
+				/* background-image: url(/$base/img/bg.png); */
+			}
+			.topbar,
+			.swagger-ui .servers-title,
+			.swagger-ui .parameter__type,
+			.swagger-ui .parameter__in,
+			.swagger-ui .parameter__name.required:after {
+				display: none !important;
+			}
+			.swagger-ui button {
+				outline: none !important;
+			}
+			.swagger-ui .wrapper {
+				padding: 0 16px;
+			}
+			.swagger-ui .float-right {
+				float: right;
+				margin: 8px 0 12px;
+			}
+			.information-container.wrapper {
+				padding: 0;
+			}
+
+			.swagger-ui .expand-operation {
+				padding: 0;
+			}
+			.swagger-ui .expand-operation svg {
+				width: 18px !important;
+				height: 18px !important;
+			}
+			.swagger-ui .opblock-control-arrow {
+				padding: 0;
+			}
+			.swagger-ui .opblock-control-arrow svg {
+				width: 16px !important;
+				height: 16px !important;
+			}
+			.swagger-ui .information-container .info {
+				margin: 0;
+				padding: 8px 16px 4px;
+				background: #333;
+				color: #fffd;
+				position: relative;
+			}
+			.swagger-ui .information-container .info::before,
+			.swagger-ui .information-container .info::after {
+				content: '';
+				display: block;
+				height: 100%;
+				width: 50vw;
+				background: #333;
+				position: absolute;
+				left: -50%;
+				top: 0;
+				z-index: -1;
+			}
+			.swagger-ui .information-container .info::after {
+				left: initial;
+				right: -50%;
+			}
+			.swagger-ui .information-container .info .title {
+				color: inherit;
+				font-size: 20px;
+			}
+			.swagger-ui .information-container .info hgroup.main {
+				margin: 0;
+			}
+			.swagger-ui .info .title small {
+				padding: 2px 6px;
+				top: 0;
+			}
+			.swagger-ui .info .title small pre {
+				font-size: inherit;
+				font-weight: 400;
+			}
+			.swagger-ui .opblock-tag {
+				padding: 8px 2px;
+				margin: 0;
+				font-size: 16px;
+			}
+			.swagger-ui .opblock-tag[data-is-open='true'] {
+				border: none;
+			}
+			.swagger-ui .opblock {
+				margin: 0 0 8px;
+				box-shadow: none;
+				border: 1px solid #e8e8e8;
+			}
+			.swagger-ui .opblock .opblock-section-header {
+				padding: 8px 16px;
+			}
+			.swagger-ui .opblock .tab-header .tab-item.active h4 span:after {
+				width: 100%;
+			}
+			.swagger-ui .opblock .opblock-summary {
+				padding: 6px 16px;
+			}
+			.swagger-ui .opblock .opblock-summary-method {
+				min-width: 80px;
+				padding: 4px 0;
+				font-size: 13px;
+			}
+			.swagger-ui .opblock .opblock-summary-path {
+				font-size: 13px;
+			}
+			.swagger-ui .parameters-container {
+				padding: 0;
+			}
+			.swagger-ui .parameter__name {
+				font-size: 14px;
+			}
+			.swagger-ui table tbody:before,
+			.swagger-ui table tbody:after {
+				content: '';
+				display: block;
+				height: 8px;
+			}
+			.swagger-ui table tbody tr td {
+				padding: 0;
+				vertical-align: middle;
+			}
+			.swagger-ui table tbody tr td:first-of-type {
+				min-width: 12em;
+			}
+			.swagger-ui .parameters-col_name {
+				font-size: 13px;
+			}
+			.swagger-ui .table-container {
+				padding: 0 16px;
+			}
+			.swagger-ui .responses-inner {
+				padding: 0 16px 16px;
+			}
+			.swagger-ui .responses-table {
+				margin: 8px 0;
+			}
+			.swagger-ui .execute-wrapper {
+				padding: 4px 16px 16px;
+			}
+			.swagger-ui .execute-wrapper:empty {
+				padding: 0;
+			}
+			.swagger-ui .btn-group {
+				padding: 8px 16px 16px;
+			}
+			.swagger-ui .btn {
+				padding: 6px 12px;
+			}
+			.swagger-ui .parameters-col_description .renderedMarkdown {
+				max-width: 45%;
+				display: inline-block;
+				min-width: 12em;
+				font-size: 13px;
+			}
+			.swagger-ui .parameters-col_description input {
+				display: inline-block;
+				max-width: 45%;
+				width: 100%;
+				margin: 0;
+				height: 28px;
+			}
+			.swagger-ui .scheme-container {
+				background: #0000;
+				margin: 0;
+				padding: 8px 0;
+				box-shadow: none;
+			}
+			.logout-button {
+				padding: 6px 12px;
+				background: #f44336;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				margin-left: 16px;
+				font-size: 13px;
+				position: absolute;
+				right: 16px;
+				top: 16px;
+			}
+			.logout-button:hover {
+				background: #d32f2f;
+			}
+			.swagger-ui .markdown p {
+				margin: 0;
+				font-size: 13px;
+			}
+			.swagger-ui .opblock-description-wrapper {
+				padding: 8px 16px;
+			}
+			.swagger-ui .responses-inner h4,
+			.swagger-ui .responses-inner h5 {
+				font-size: 14px;
+				margin: 8px 0;
+			}
+			.swagger-ui pre {
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="swagger-ui"></div>
+		<script>
+			function logout() {
+				document.cookie = 'apiDocPassword=;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT'
+				window.location.reload()
+			}
+
+			window.onload = function () {
+				if (typeof SwaggerUIBundle === 'undefined') {
+					setTimeout(window.onload, 100)
+					return
+				}
+
+				const path = window.location.pathname.replace(/\/+$/, '')
+				const action = path.split('/').pop()
+				const swaggerJsonUrl = action === 'doc' ? '/api/doc/swagger.json' : `/api/doc/swagger.json?action=${action}`
+
+				console.log('Loading Swagger UI with URL:', swaggerJsonUrl)
+
+				window.ui = SwaggerUIBundle({
+					url: swaggerJsonUrl,
+					dom_id: '#swagger-ui',
+					presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+					layout: 'StandaloneLayout',
+					docExpansion: 'none',
+					requestInterceptor: req => {
+						console.log('Swagger UI Request:', req)
+						return req
+					},
+					responseInterceptor: resp => {
+						console.log('Swagger UI Response:', resp)
+						return resp
+					},
+				})
+
+				window.ui.initOAuth({})
+				window.ui.system.on('error', function (error) {
+					console.error('Swagger UI Error:', error)
+				})
+				const checkInfoContainer = setInterval(() => {
+					const infoContainer = document.querySelector('.swagger-ui .information-container .info')
+					if (infoContainer) {
+						clearInterval(checkInfoContainer)
+						const logoutButton = document.createElement('button')
+						logoutButton.className = 'logout-button'
+						logoutButton.onclick = logout
+						logoutButton.textContent = '安全退出'
+						infoContainer.appendChild(logoutButton)
+					}
+				}, 100)
+			}
+		</script>
+	</body>
+</html>

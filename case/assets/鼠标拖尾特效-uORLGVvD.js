@@ -1,0 +1,1 @@
+import{_ as s,m as a,l as t,o as _,b as o,c,d as r}from"./index-idhFCSvm.js";const n={__name:"鼠标拖尾特效",setup(p){return a({}),t(),_(()=>{}),(l,e)=>(o(),c("section",null,e[0]||(e[0]=[r("iframe",{src:"/$apps/case/交互效果/鼠标拖尾特效/"},null,-1)])))}},m=s(n,[["__scopeId","data-v-19cc795f"]]);export{m as default};

@@ -1,0 +1,972 @@
+[
+	{
+		"name": "Tailwind CSS v3",
+		"primary": 6,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#FEF2F2", "#FEE2E2", "#FECACA", "#FCA5A5", "#F87171", "#EF4444", "#DC2626", "#B91C1C", "#991B1B", "#7F1D1D"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#FFF7ED", "#FFEDD5", "#FED7AA", "#FDBA74", "#FB923C", "#F97316", "#EA580C", "#C2410C", "#9A3412", "#7C2D12"]
+			},
+			{
+				"name": "Amber",
+				"list": ["#FFFBEB", "#FEF3C7", "#FDE68A", "#FCD34D", "#FBBF24", "#F59E0B", "#D97706", "#B45309", "#92400E", "#78350F"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#FEFCE8", "#FEF9C3", "#FEF08A", "#FDE047", "#FACC15", "#EAB308", "#CA8A04", "#A16207", "#854D0E", "#713F12"]
+			},
+			{
+				"name": "Lime",
+				"list": ["#F7FEE7", "#ECFCCB", "#D9F99D", "#BEF264", "#A3E635", "#84CC16", "#65A30D", "#4D7C0F", "#3F6212", "#365314"]
+			},
+			{
+				"name": "Green",
+				"list": ["#F0FDF4", "#DCFCE7", "#BBF7D0", "#86EFAC", "#4ADE80", "#22C55E", "#16A34A", "#15803D", "#166534", "#14532D"]
+			},
+			{
+				"name": "Emerald",
+				"list": ["#ECFDF5", "#D1FAE5", "#A7F3D0", "#6EE7B7", "#34D399", "#10B981", "#059669", "#047857", "#065F46", "#064E3B"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#F0FDFA", "#CCFBF1", "#99F6E4", "#5EEAD4", "#2DD4BF", "#14B8A6", "#0D9488", "#0F766E", "#115E59", "#134E4A"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#ECFEFF", "#CFFAFE", "#A5F3FC", "#67E8F9", "#22D3EE", "#06B6D4", "#0891B2", "#0E7490", "#155E75", "#164E63"]
+			},
+			{
+				"name": "Sky",
+				"list": ["#F0F9FF", "#E0F2FE", "#BAE6FD", "#7DD3FC", "#38BDF8", "#0EA5E9", "#0284C7", "#0369A1", "#075985", "#0C4A6E"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#EFF6FF", "#DBEAFE", "#BFDBFE", "#93C5FD", "#60A5FA", "#3B82F6", "#2563EB", "#1D4ED8", "#1E40AF", "#1E3A8A"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#EEF2FF", "#E0E7FF", "#C7D2FE", "#A5B4FC", "#818CF8", "#6366F1", "#4F46E5", "#4338CA", "#3730A3", "#312E81"]
+			},
+			{
+				"name": "Violet",
+				"list": ["#F5F3FF", "#EDE9FE", "#DDD6FE", "#C4B5FD", "#A78BFA", "#8B5CF6", "#7C3AED", "#6D28D9", "#5B21B6", "#4C1D95"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#FAF5FF", "#F3E8FF", "#E9D5FF", "#D8B4FE", "#C084FC", "#A855F7", "#9333EA", "#7E22CE", "#6B21A8", "#581C87"]
+			},
+			{
+				"name": "Fuchsia",
+				"list": ["#FDF4FF", "#FAE8FF", "#F5D0FE", "#F0ABFC", "#E879F9", "#D946EF", "#C026D3", "#A21CAF", "#86198F", "#701A75"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#FDF2F8", "#FCE7F3", "#FBCFE8", "#F9A8D4", "#F472B6", "#EC4899", "#DB2777", "#BE185D", "#9D174D", "#831843"]
+			},
+			{
+				"name": "Rose",
+				"list": ["#FFF1F2", "#FFE4E6", "#FECDD3", "#FDA4AF", "#FB7185", "#F43F5E", "#E11D48", "#BE123C", "#9F1239", "#881337"]
+			},
+			{
+				"name": "Stone",
+				"list": ["#FAFAF9", "#F5F5F4", "#E7E5E4", "#D6D3D1", "#A8A29E", "#78716C", "#57534E", "#44403C", "#292524", "#1C1917"]
+			},
+			{
+				"name": "Neutral",
+				"list": ["#FAFAFA", "#F5F5F5", "#E5E5E5", "#D4D4D4", "#A3A3A3", "#737373", "#525252", "#404040", "#262626", "#171717"]
+			},
+			{
+				"name": "Zinc",
+				"list": ["#FAFAFA", "#F4F4F5", "#E4E4E7", "#D4D4D8", "#A1A1AA", "#71717A", "#52525B", "#3F3F46", "#27272A", "#18181B"]
+			},
+			{
+				"name": "Gray",
+				"list": ["#F9FAFB", "#F3F4F6", "#E5E7EB", "#D1D5DB", "#9CA3AF", "#6B7280", "#4B5563", "#374151", "#1F2937", "#111827"]
+			},
+			{
+				"name": "Slate",
+				"list": ["#F8FAFC", "#F1F5F9", "#E2E8F0", "#CBD5E1", "#94A3B8", "#64748B", "#475569", "#334155", "#1E293B", "#0F172A"]
+			}
+		]
+	},
+	{
+		"name": "Tailwind CSS v2",
+		"primary": 6,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#FEF2F2", "#FEE2E2", "#FECACA", "#FCA5A5", "#F87171", "#EF4444", "#DC2626", "#B91C1C", "#991B1B", "#7F1D1D"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#FFFBEB", "#FEF3C7", "#FDE68A", "#FCD34D", "#FBBF24", "#F59E0B", "#D97706", "#B45309", "#92400E", "#78350F"]
+			},
+			{
+				"name": "Green",
+				"list": ["#ECFDF5", "#D1FAE5", "#A7F3D0", "#6EE7B7", "#34D399", "#10B981", "#059669", "#047857", "#065F46", "#064E3B"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#EFF6FF", "#DBEAFE", "#BFDBFE", "#93C5FD", "#60A5FA", "#3B82F6", "#2563EB", "#1D4ED8", "#1E40AF", "#1E3A8A"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#EEF2FF", "#E0E7FF", "#C7D2FE", "#A5B4FC", "#818CF8", "#6366F1", "#4F46E5", "#4338CA", "#3730A3", "#312E81"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#F5F3FF", "#EDE9FE", "#DDD6FE", "#C4B5FD", "#A78BFA", "#8B5CF6", "#7C3AED", "#6D28D9", "#5B21B6", "#4C1D95"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#FDF2F8", "#FCE7F3", "#FBCFE8", "#F9A8D4", "#F472B6", "#EC4899", "#DB2777", "#BE185D", "#9D174D", "#831843"]
+			},
+			{
+				"name": "Gray",
+				"list": ["#F9FAFB", "#F3F4F6", "#E5E7EB", "#D1D5DB", "#9CA3AF", "#6B7280", "#4B5563", "#374151", "#1F2937", "#111827"]
+			}
+		]
+	},
+	{
+		"name": "Tailwind CSS v1",
+		"primary": 5,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#fff5f5", "#fed7d7", "#feb2b2", "#fc8181", "#f56565", "#e53e3e", "#c53030", "#9b2c2c", "#742a2a"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#fffaf0", "#feebc8", "#fbd38d", "#f6ad55", "#ed8936", "#dd6b20", "#c05621", "#9c4221", "#7b341e"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#fffff0", "#fefcbf", "#faf089", "#f6e05e", "#ecc94b", "#d69e2e", "#b7791f", "#975a16", "#744210"]
+			},
+			{
+				"name": "Green",
+				"list": ["#f0fff4", "#c6f6d5", "#9ae6b4", "#68d391", "#48bb78", "#38a169", "#2f855a", "#276749", "#22543d"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#e6fffa", "#b2f5ea", "#81e6d9", "#4fd1c5", "#38b2ac", "#319795", "#2c7a7b", "#285e61", "#234e52"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#ebf8ff", "#bee3f8", "#90cdf4", "#63b3ed", "#4299e1", "#3182ce", "#2b6cb0", "#2c5282", "#2a4365"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#ebf4ff", "#c3dafe", "#a3bffa", "#7f9cf5", "#667eea", "#5a67d8", "#4c51bf", "#434190", "#3c366b"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#faf5ff", "#e9d8fd", "#d6bcfa", "#b794f4", "#9f7aea", "#805ad5", "#6b46c1", "#553c9a", "#44337a"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#fff5f7", "#fed7e2", "#fbb6ce", "#f687b3", "#ed64a6", "#d53f8c", "#b83280", "#97266d", "#702459"]
+			},
+			{
+				"name": "Gray",
+				"list": ["#f7fafc", "#edf2f7", "#e2e8f0", "#cbd5e0", "#a0aec0", "#718096", "#4a5568", "#2d3748", "#1a202c"]
+			}
+		]
+	},
+	{
+		"name": "Ant Design",
+		"primary": 6,
+		"list": [
+			{
+				"info": "斗志、奔放",
+				"name": "Dust Red / 薄暮",
+				"list": ["#fff1f0", "#ffccc7", "#ffa39e", "#ff7875", "#ff4d4f", "#f5222d", "#cf1322", "#a8071a", "#820014", "#5c0011"]
+			},
+			{
+				"info": "醒目、澎湃",
+				"name": "Volcano / 火山",
+				"list": ["#fff2e8", "#ffd8bf", "#ffbb96", "#ff9c6e", "#ff7a45", "#fa541c", "#d4380d", "#ad2102", "#871400", "#610b00"]
+			},
+			{
+				"info": "温暖、欢快",
+				"name": "Sunset Orange / 日暮",
+				"list": ["#fff7e6", "#ffe7ba", "#ffd591", "#ffc069", "#ffa940", "#fa8c16", "#d46b08", "#ad4e00", "#873800", "#612500"]
+			},
+			{
+				"info": "活力、积极",
+				"name": "Calendula Gold / 金盏花",
+				"list": ["#fffbe6", "#fff1b8", "#ffe58f", "#ffd666", "#ffc53d", "#faad14", "#d48806", "#ad6800", "#874d00", "#613400"]
+			},
+			{
+				"info": "出生、阳光",
+				"name": "Sunrise Yellow / 日出",
+				"list": ["#feffe6", "#ffffb8", "#fffb8f", "#fff566", "#ffec3d", "#fadb14", "#d4b106", "#ad8b00", "#876800", "#614700"]
+			},
+			{
+				"info": "自然、生机",
+				"name": "Lime / 青柠",
+				"list": ["#fcffe6", "#f4ffb8", "#eaff8f", "#d3f261", "#bae637", "#a0d911", "#7cb305", "#5b8c00", "#3f6600", "#254000"]
+			},
+			{
+				"info": "健康、创新",
+				"name": "Polar Green / 极光绿",
+				"list": ["#f6ffed", "#d9f7be", "#b7eb8f", "#95de64", "#73d13d", "#52c41a", "#389e0d", "#237804", "#135200", "#092b00"]
+			},
+			{
+				"info": "希望、坚强",
+				"name": "Cyan / 明青",
+				"list": ["#e6fffb", "#b5f5ec", "#87e8de", "#5cdbd3", "#36cfc9", "#13c2c2", "#08979c", "#006d75", "#00474f", "#002329"]
+			},
+			{
+				"info": "包容、科技、普惠",
+				"name": "Daybreak Blue / 拂晓蓝",
+				"list": ["#e6f7ff", "#bae7ff", "#91d5ff", "#69c0ff", "#40a9ff", "#1890ff", "#096dd9", "#0050b3", "#003a8c", "#002766"]
+			},
+			{
+				"info": "探索、钻研",
+				"name": "Geek Blue / 极客蓝",
+				"list": ["#f0f5ff", "#d6e4ff", "#adc6ff", "#85a5ff", "#597ef7", "#2f54eb", "#1d39c4", "#10239e", "#061178", "#030852"]
+			},
+			{
+				"info": "优雅、浪漫",
+				"name": "Golden Purple / 酱紫",
+				"list": ["#f9f0ff", "#efdbff", "#d3adf7", "#b37feb", "#9254de", "#722ed1", "#531dab", "#391085", "#22075e", "#120338"]
+			},
+			{
+				"info": "明快、感性",
+				"name": "Magenta / 法式洋红",
+				"list": ["#fff0f6", "#ffd6e7", "#ffadd2", "#ff85c0", "#f759ab", "#eb2f96", "#c41d7f", "#9e1068", "#780650", "#520339"]
+			},
+			{
+				"info": "　",
+				"name": "Gray / 灰度",
+				"list": ["#ffffff", "#fafafa", "#f5f5f5", "#e8e8e8", "#d9d9d9", "#bfbfbf", "#8c8c8c", "#595959", "#262626", "#000000"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI GA",
+		"primary": 6,
+		"list": [
+			{
+				"name": "red",
+				"list": ["#fff5f5", "#ffe3e3", "#ffc9c9", "#ffa8a8", "#ff8787", "#ff6b6b", "#fa5252", "#f03e3e", "#e03131", "#c92a2a"]
+			},
+			{
+				"name": "orange",
+				"list": ["#fff4e6", "#ffe8cc", "#ffd8a8", "#ffc078", "#ffa94d", "#ff922b", "#fd7e14", "#f76707", "#e8590c", "#d9480f"]
+			},
+			{
+				"name": "yellow",
+				"list": ["#fff9db", "#fff3bf", "#ffec99", "#ffe066", "#ffd43b", "#fcc419", "#fab005", "#f59f00", "#f08c00", "#e67700"]
+			},
+			{
+				"name": "lime",
+				"list": ["#f4fce3", "#e9fac8", "#d8f5a2", "#c0eb75", "#a9e34b", "#94d82d", "#82c91e", "#74b816", "#66a80f", "#5c940d"]
+			},
+			{
+				"name": "green",
+				"list": ["#ebfbee", "#d3f9d8", "#b2f2bb", "#8ce99a", "#69db7c", "#51cf66", "#40c057", "#37b24d", "#2f9e44", "#2b8a3e"]
+			},
+			{
+				"name": "teal",
+				"list": ["#e6fcf5", "#c3fae8", "#96f2d7", "#63e6be", "#38d9a9", "#20c997", "#12b886", "#0ca678", "#099268", "#087f5b"]
+			},
+			{
+				"name": "cyan",
+				"list": ["#e3fafc", "#c5f6fa", "#99e9f2", "#66d9e8", "#3bc9db", "#22b8cf", "#15aabf", "#1098ad", "#0c8599", "#0b7285"]
+			},
+			{
+				"name": "blue",
+				"list": ["#e7f5ff", "#d0ebff", "#a5d8ff", "#74c0fc", "#4dabf7", "#339af0", "#228be6", "#1c7ed6", "#1971c2", "#1864ab"]
+			},
+			{
+				"name": "indigo",
+				"list": ["#edf2ff", "#dbe4ff", "#bac8ff", "#91a7ff", "#748ffc", "#5c7cfa", "#4c6ef5", "#4263eb", "#3b5bdb", "#364fc7"]
+			},
+			{
+				"name": "violet",
+				"list": ["#f3f0ff", "#e5dbff", "#d0bfff", "#b197fc", "#9775fa", "#845ef7", "#7950f2", "#7048e8", "#6741d9", "#5f3dc4"]
+			},
+			{
+				"name": "grape",
+				"list": ["#f8f0fc", "#f3d9fa", "#eebefa", "#e599f7", "#da77f2", "#cc5de8", "#be4bdb", "#ae3ec9", "#9c36b5", "#862e9c"]
+			},
+			{
+				"name": "pink",
+				"list": ["#fff0f6", "#ffdeeb", "#fcc2d7", "#faa2c1", "#f783ac", "#f06595", "#e64980", "#d6336c", "#c2255c", "#a61e4d"]
+			},
+			{
+				"name": "gray",
+				"list": ["#f8f9fa", "#f1f3f5", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd", "#868e96", "#495057", "#343a40", "#212529"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI",
+		"list": [
+			{
+				"name": "red / 嫣红",
+				"list": ["#fadbd9", "#e54d42"]
+			},
+			{
+				"name": "orange / 桔橙",
+				"list": ["#fde6d2", "#f37b1d"]
+			},
+			{
+				"name": "yellow / 明黄",
+				"list": ["#fef4d6", "#fbbd08"]
+			},
+			{
+				"name": "olive / 橄榄",
+				"list": ["#e8f4d9", "#8dc63f"]
+			},
+			{
+				"name": "green / 森绿",
+				"list": ["#d7f0db", "#39b54a"]
+			},
+			{
+				"name": "cyan / 天青",
+				"list": ["#d2f1f0", "#1cbbb4"]
+			},
+			{
+				"name": "blue / 海蓝",
+				"list": ["#cce6ff", "#0081ff"]
+			},
+			{
+				"name": "purple / 姹紫",
+				"list": ["#e1d7f0", "#6739b6"]
+			},
+			{
+				"name": "mauve / 木槿",
+				"list": ["#ebd4ef", "#9c26b0"]
+			},
+			{
+				"name": "pink / 桃粉",
+				"list": ["#f9d7ea", "#e03997"]
+			},
+			{
+				"name": "brown / 棕褐",
+				"list": ["#ede1d9", "#a5673f"]
+			},
+			{
+				"name": "gray / 草灰",
+				"list": ["#f0f0f0", "#aaaaaa"]
+			},
+			{
+				"name": "grey / 玄灰",
+				"list": ["#e7ebed", "#8799a3"]
+			},
+			{
+				"name": "white&black / 雅白&墨黑",
+				"list": ["#ffffff", "#333333"]
+			}
+		]
+	},
+	{
+		"name": "Arco Design",
+		"primary": 6,
+		"list": [
+			{
+				"name": "Red / 浪漫红",
+				"list": ["#FFECE8", "#FDCDC5", "#FBACA3", "#F98981", "#F76560", "#F53F3F", "#CB272D", "#A1151E", "#770813", "#4D000A"]
+			},
+			{
+				"name": "Orange Red / 晚秋红",
+				"list": ["#FFF3E8", "#FDDDC3", "#FCC59F", "#FAAC7B", "#F99057", "#F77234", "#CC5120", "#A23511", "#771F06", "#4D0E00"]
+			},
+			{
+				"name": "Orange / 活力橙",
+				"list": ["#FFF7E8", "#FFE4BA", "#FFCF8B", "#FFB65D", "#FF9A2E", "#FF7D00", "#D25F00", "#A64500", "#792E00", "#4D1B00"]
+			},
+			{
+				"name": "Gold / 黄昏",
+				"list": ["#FFFCE8", "#FDF4BF", "#FCE996", "#FADC6D", "#F9CC45", "#F7BA1E", "#CC9213", "#A26D0A", "#774B04", "#4D2D00"]
+			},
+			{
+				"name": "Yellow / 柠檬黄",
+				"list": ["#FEFFE8", "#FEFEBE", "#FDFA94", "#FCF26B", "#FBE842", "#FADC19", "#CFAF0F", "#A38408", "#785D03", "#4D3800"]
+			},
+			{
+				"name": "Lime / 新生绿",
+				"list": ["#FCFFE8", "#EDF8BB", "#DCF190", "#C9E968", "#B5E241", "#9FDB1D", "#7EB712", "#5F940A", "#437004", "#2A4D00"]
+			},
+			{
+				"name": "Green / 仙野绿",
+				"list": ["#E8FFEA", "#AFF0B5", "#7BE188", "#4CD263", "#23C343", "#00B42A", "#009A29", "#008026", "#006622", "#004D1C"]
+			},
+			{
+				"name": "Cyan / 碧涛青",
+				"list": ["#E8FFFB", "#B7F4EC", "#89E9E0", "#5EDFD6", "#37D4CF", "#14C9C9", "#0DA5AA", "#07828B", "#03616C", "#00424D"]
+			},
+			{
+				"name": "Blue / 海蔚蓝",
+				"list": ["#E8F7FF", "#C3E7FE", "#9FD4FD", "#7BC0FC", "#57A9FB", "#3491FA", "#206CCF", "#114BA3", "#063078", "#001A4D"]
+			},
+			{
+				"name": "Arco Blue / 极致蓝",
+				"list": ["#E8F3FF", "#BEDAFF", "#94BFFF", "#6AA1FF", "#4080FF", "#165DFF", "#0E42D2", "#072CA6", "#031A79", "#000D4D"]
+			},
+			{
+				"name": "Purple / 暗夜紫",
+				"list": ["#F5E8FF", "#DDBEF6", "#C396ED", "#A871E3", "#8D4EDA", "#722ED1", "#551DB0", "#3C108F", "#27066E", "#16004D"]
+			},
+			{
+				"name": "Pink Purple / 青春紫",
+				"list": ["#FFE8FB", "#F7BAEF", "#F08EE6", "#E865DF", "#E13EDB", "#D91AD9", "#B010B6", "#8A0993", "#650370", "#42004D"]
+			},
+			{
+				"name": "Magenta / 品红",
+				"list": ["#FFE8F1", "#FDC2DB", "#FB9DC7", "#F979B7", "#F754A8", "#F5319D", "#CB1E83", "#A11069", "#77064F", "#4D0034"]
+			},
+			{
+				"name": "Gray / 中性灰",
+				"list": ["#F7F8FA", "#F2F3F5", "#E5E6EB", "#C9CDD4", "#A9AEB8", "#86909C", "#6B7785", "#4E5969", "#272E3B", "#1D2129"]
+			}
+		]
+	},
+	{
+		"name": "Arco Design (dark)",
+		"primary": 5,
+		"list": [
+			{
+				"name": "Red / 浪漫红",
+				"list": ["#4D000A", "#770611", "#A1161F", "#CB2E34", "#F54E4E", "#F76965", "#F98D86", "#FBB0A7", "#FDD1CA", "#FFF0EC"]
+			},
+			{
+				"name": "Orange Red / 晚秋红",
+				"list": ["#4D0E00", "#771E05", "#A23714", "#CC5729", "#F77E45", "#F9925A", "#FAAD7D", "#FCC6A1", "#FDDEC5", "#FFF4EB"]
+			},
+			{
+				"name": "Orange / 活力橙",
+				"list": ["#4D1B00", "#793004", "#A64B0A", "#D26913", "#FF8D1F", "#FF9626", "#FFB357", "#FFCD87", "#FFE3B8", "#FFF7E8"]
+			},
+			{
+				"name": "Gold / 黄昏",
+				"list": ["#4D2D00", "#774B04", "#A26F0F", "#CC961F", "#F7C034", "#F9CC44", "#FADC6C", "#FCE995", "#FDF4BE", "#FFFCE8"]
+			},
+			{
+				"name": "Yellow / 柠檬黄",
+				"list": ["#4D3800", "#785E07", "#A38614", "#CFB325", "#FAE13C", "#FBE94B", "#FCF374", "#FDFA9D", "#FEFEC6", "#FEFFF0"]
+			},
+			{
+				"name": "Lime / 新生绿",
+				"list": ["#2A4D00", "#447006", "#629412", "#84B723", "#A8DB39", "#B8E24B", "#CBE970", "#DEF198", "#EEF8C2", "#FDFFEE"]
+			},
+			{
+				"name": "Green / 仙野绿",
+				"list": ["#004D1C", "#046625", "#0A802D", "#129A37", "#1DB440", "#27C346", "#50D266", "#7EE18B", "#B2F0B7", "#EBFFEC"]
+			},
+			{
+				"name": "Cyan / 碧涛青",
+				"list": ["#00424D", "#06616C", "#11838B", "#1FA6AA", "#30C9C9", "#3FD4CF", "#66DFD7", "#90E9E1", "#BEF4ED", "#F0FFFC"]
+			},
+			{
+				"name": "Blue / 海蔚蓝",
+				"list": ["#001A4D", "#052F78", "#134CA3", "#2971CF", "#469AFA", "#5AAAFB", "#7DC1FC", "#A1D5FD", "#C6E8FE", "#EAF8FF"]
+			},
+			{
+				"name": "Arco Blue / 极致蓝",
+				"list": ["#000D4D", "#041B79", "#0E32A6", "#1D4DD2", "#306FFF", "#3C7EFF", "#689FFF", "#93BEFF", "#BEDAFF", "#EAF4FF"]
+			},
+			{
+				"name": "Purple / 暗夜紫",
+				"list": ["#16004D", "#27066E", "#3E138F", "#5A25B0", "#7B3DD1", "#8E51DA", "#A974E3", "#C59AED", "#DFC2F6", "#F7EDFF"]
+			},
+			{
+				"name": "Pink Purple / 青春紫",
+				"list": ["#42004D", "#650370", "#8A0D93", "#B01BB6", "#D92ED9", "#E13DDB", "#E866DF", "#F092E6", "#F7C1F0", "#FFF2FD"]
+			},
+			{
+				"name": "Magenta / 品红",
+				"list": ["#4D0034", "#770850", "#A1176C", "#CB2B88", "#F545A6", "#F756A9", "#F97AB8", "#FB9EC8", "#FDC3DB", "#FFE8F1"]
+			},
+			{
+				"name": "Gray / 中性灰",
+				"list": ["#17171A", "#2E2E30", "#484849", "#5F5F60", "#78787A", "#929293", "#ABABAC", "#C5C5C5", "#DFDFDF", "#F6F6F6"]
+			}
+		]
+	},
+	{
+		"name": "semi design",
+		"primary": 6,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#fef2ed", "#feddd2", "#fdb7a5", "#fb9078", "#fa664c", "#f93920", "#d52515", "#b2140c", "#8e0805", "#6a0103"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#fff8ea", "#feeecc", "#fed998", "#fdc165", "#fda633", "#fc8800", "#d26700", "#a84a00", "#7e3100", "#541d00"]
+			},
+			{
+				"name": "Amber",
+				"list": ["#fefbeb", "#fcf5ce", "#f9e89e", "#f6d86f", "#f3c641", "#f0b114", "#c88a0f", "#a0660a", "#784606", "#502b03"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#fffdea", "#fefbcb", "#fdf398", "#fce865", "#fbda32", "#fac800", "#d0aa00", "#a78b00", "#7d6a00", "#534800"]
+			},
+			{
+				"name": "Lime",
+				"list": ["#f2fae6", "#e3f6c5", "#cbed8e", "#b7e35b", "#a7da2c", "#9bd100", "#7eae00", "#638b00", "#486800", "#2f4600"]
+			},
+			{
+				"name": "Light Green",
+				"list": ["#f3f8ec", "#e3f0d0", "#c8e2a5", "#add37e", "#93c55b", "#7bb63c", "#649830", "#4e7926", "#395b1b", "#253d12"]
+			},
+			{
+				"name": "Green",
+				"list": ["#ecf7ec", "#d0f0d1", "#a4e0a7", "#7dd182", "#5ac262", "#3bb346", "#30953b", "#25772f", "#1b5924", "#113c18"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#e4f7f4", "#c0f0e8", "#87e0d3", "#54d1c1", "#27c2b0", "#00b3a1", "#009589", "#00776f", "#005955", "#003c3a"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#e5f7f8", "#c2eff0", "#8adde2", "#58cbd3", "#2cb8c5", "#05a4b6", "#038698", "#016979", "#004d5b", "#00323d"]
+			},
+			{
+				"name": "Light Blue",
+				"list": ["#e9f7fd", "#c9ecfc", "#95d8f8", "#62c3f5", "#30acf1", "#0095ee", "#007bca", "#0063a7", "#004b83", "#00355f"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#eaf5ff", "#cbe7fe", "#98cdfd", "#65b2fc", "#3295fb", "#0077fa", "#0062d6", "#004fb3", "#003d8f", "#002c6b"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#eceff8", "#d1d8f0", "#a7b3e1", "#8090d3", "#5e6fc4", "#3f51b5", "#3342a1", "#28348c", "#1f2878", "#171d63"]
+			},
+			{
+				"name": "Violet",
+				"list": ["#f3edf9", "#e2d1f4", "#c4a7e9", "#a67fdd", "#885bd2", "#6a3ac7", "#572fb3", "#46259e", "#361c8a", "#281475"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#f7e9f7", "#efcaf0", "#dd9be0", "#c96fd1", "#b449c2", "#9e28b3", "#871e9e", "#71168a", "#5c0f75", "#490a61"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#fdecef", "#fbcfd8", "#f6a0b5", "#f27396", "#ed487b", "#e91e63", "#c51356", "#a20b48", "#7e053a", "#5a012b"]
+			},
+			{
+				"name": "Grey",
+				"list": ["#f9f9f9", "#e6e8ea", "#c6cacd", "#a7abb0", "#888d92", "#6b7075", "#555b61", "#41464c", "#2e3238", "#1c1f23"]
+			}
+		]
+	},
+	{
+		"name": "semi design (dark)",
+		"primary": 5,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#6c090b", "#901110", "#b42019", "#d73324", "#fb4932", "#fc725a", "#fd9983", "#fdbeac", "#fee0d5", "#fff3ef"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#551f03", "#803506", "#aa500a", "#d56f0f", "#ff9214", "#ffae43", "#ffc772", "#ffdda1", "#ffefd0", "#fff9ed"]
+			},
+			{
+				"name": "Amber",
+				"list": ["#512e09", "#794b0f", "#a16b16", "#ca8f1e", "#f2b726", "#f5ca50", "#f7db7a", "#faeaa6", "#fcf6d2", "#fefbed"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#544903", "#7e6c06", "#a88e0a", "#d2af0f", "#fcce14", "#fdde43", "#fdeb71", "#fef5a0", "#fefbd0", "#fffeec"]
+			},
+			{
+				"name": "Lime",
+				"list": ["#314603", "#4b6905", "#678d09", "#84b00c", "#a2d311", "#aedc3a", "#bde566", "#cfed96", "#e5f6c9", "#f3fbe9"]
+			},
+			{
+				"name": "Light Green",
+				"list": ["#263d13", "#3b5c1d", "#517b28", "#679934", "#7fb840", "#97c65f", "#b0d481", "#c9e3a7", "#e4f1d1", "#f3f8ed"]
+			},
+			{
+				"name": "Green",
+				"list": ["#123c19", "#1c5a25", "#277731", "#32953d", "#3eb349", "#5dc264", "#7fd184", "#a6e1a8", "#d0f0d1", "#ecf7ec"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#023c39", "#045a55", "#07776f", "#0a9588", "#0eb3a1", "#33c2b0", "#5ed1c1", "#8ee1d3", "#c4f0e8", "#e6f7f4"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#04343d", "#074f5c", "#0a6c7b", "#0e8999", "#13a8b8", "#38bbc6", "#62cdd4", "#91dfe3", "#c6eff1", "#e7f7f8"]
+			},
+			{
+				"name": "Light Blue",
+				"list": ["#003761", "#004d85", "#0366a9", "#0a81cc", "#139ff0", "#40b4f3", "#6ec8f6", "#9ddcf9", "#ceeefc", "#ebf8fe"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#053170", "#0a4694", "#135cb8", "#1d75db", "#2990ff", "#54a9ff", "#7fc1ff", "#a9d7ff", "#d4ecff", "#eff8ff"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#171e65", "#20297a", "#29368e", "#3444a3", "#4053b7", "#5f71c5", "#8191d4", "#a7b4e2", "#d1d8f1", "#edeff8"]
+			},
+			{
+				"name": "Violet",
+				"list": ["#401b77", "#4c248c", "#582ea0", "#6439b5", "#7246c9", "#8865d4", "#a288df", "#beade9", "#ddd4f4", "#f1eefa"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#4a1061", "#5e1776", "#731f8a", "#89289f", "#a033b3", "#b553c2", "#ca78d1", "#dda0e1", "#efcef0", "#f7ebf7"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#5c0730", "#800e41", "#a41751", "#c72261", "#eb2f71", "#ef5686", "#f37e9f", "#f7a8bc", "#fbd3dc", "#fdeef1"]
+			},
+			{
+				"name": "Grey",
+				"list": ["#1c1f23", "#2e3238", "#41464c", "#555b61", "#6b7075", "#888d92", "#a7abb0", "#c6cacd", "#e6e8ea", "#f9f9f9"]
+			}
+		]
+	},
+	{
+		"name": "Material Design",
+		"primary": 6,
+		"list": [
+			{
+				"name": "Red",
+				"list": [
+					"#ffebee",
+					"#ffcdd2",
+					"#ef9a9a",
+					"#e57373",
+					"#ef5350",
+					"#f44336",
+					"#e53935",
+					"#d32f2f",
+					"#c62828",
+					"#b71c1c",
+					"hr",
+					"#ff8a80",
+					"#ff5252",
+					"#ff1744",
+					"#d50000"
+				]
+			},
+			{
+				"name": "Deep Orange",
+				"list": [
+					"#fbe9e7",
+					"#ffccbc",
+					"#ffab91",
+					"#ff8a65",
+					"#ff7043",
+					"#ff5722",
+					"#f4511e",
+					"#e64a19",
+					"#d84315",
+					"#bf360c",
+					"hr",
+					"#ff9e80",
+					"#ff6e40",
+					"#ff3d00",
+					"#dd2c00"
+				]
+			},
+			{
+				"name": "Orange",
+				"list": [
+					"#fff3e0",
+					"#ffe0b2",
+					"#ffcc80",
+					"#ffb74d",
+					"#ffa726",
+					"#ff9800",
+					"#fb8c00",
+					"#f57c00",
+					"#ef6c00",
+					"#e65100",
+					"hr",
+					"#ffd180",
+					"#ffab40",
+					"#ff9100",
+					"#ff6d00"
+				]
+			},
+			{
+				"name": "Amber",
+				"list": [
+					"#fff8e1",
+					"#ffecb3",
+					"#ffe082",
+					"#ffd54f",
+					"#ffca28",
+					"#ffc107",
+					"#ffb300",
+					"#ffa000",
+					"#ff8f00",
+					"#ff6f00",
+					"hr",
+					"#ffe57f",
+					"#ffd740",
+					"#ffc400",
+					"#ffab00"
+				]
+			},
+			{
+				"name": "Yellow",
+				"list": [
+					"#fffde7",
+					"#fff9c4",
+					"#fff59d",
+					"#fff176",
+					"#ffee58",
+					"#ffeb3b",
+					"#fdd835",
+					"#fbc02d",
+					"#f9a825",
+					"#f57f17",
+					"hr",
+					"#ffff8d",
+					"#ffff00",
+					"#ffea00",
+					"#ffd600"
+				]
+			},
+			{
+				"name": "Lime",
+				"list": [
+					"#f9fbe7",
+					"#f0f4c3",
+					"#e6ee9c",
+					"#dce775",
+					"#d4e157",
+					"#cddc39",
+					"#c0ca33",
+					"#afb42b",
+					"#9e9d24",
+					"#827717",
+					"hr",
+					"#f4ff81",
+					"#eeff41",
+					"#c6ff00",
+					"#aeea00"
+				]
+			},
+			{
+				"name": "Light Green",
+				"list": [
+					"#f1f8e9",
+					"#dcedc8",
+					"#c5e1a5",
+					"#aed581",
+					"#9ccc65",
+					"#8bc34a",
+					"#7cb342",
+					"#689f38",
+					"#558b2f",
+					"#33691e",
+					"hr",
+					"#ccff90",
+					"#b2ff59",
+					"#76ff03",
+					"#64dd17"
+				]
+			},
+			{
+				"name": "Green",
+				"list": [
+					"#e8f5e9",
+					"#c8e6c9",
+					"#a5d6a7",
+					"#81c784",
+					"#66bb6a",
+					"#4caf50",
+					"#43a047",
+					"#388e3c",
+					"#2e7d32",
+					"#1b5e20",
+					"hr",
+					"#b9f6ca",
+					"#69f0ae",
+					"#00e676",
+					"#00c853"
+				]
+			},
+			{
+				"name": "Teal",
+				"list": [
+					"#e0f2f1",
+					"#b2dfdb",
+					"#80cbc4",
+					"#4db6ac",
+					"#26a69a",
+					"#009688",
+					"#00897b",
+					"#00796b",
+					"#00695c",
+					"#004d40",
+					"hr",
+					"#a7ffeb",
+					"#64ffda",
+					"#1de9b6",
+					"#00bfa5"
+				]
+			},
+			{
+				"name": "Cyan",
+				"list": [
+					"#e0f7fa",
+					"#b2ebf2",
+					"#80deea",
+					"#4dd0e1",
+					"#26c6da",
+					"#00bcd4",
+					"#00acc1",
+					"#0097a7",
+					"#00838f",
+					"#006064",
+					"hr",
+					"#84ffff",
+					"#18ffff",
+					"#00e5ff",
+					"#00b8d4"
+				]
+			},
+			{
+				"name": "Light Blue",
+				"list": [
+					"#e1f5fe",
+					"#b3e5fc",
+					"#81d4fa",
+					"#4fc3f7",
+					"#29b6f6",
+					"#03a9f4",
+					"#039be5",
+					"#0288d1",
+					"#0277bd",
+					"#01579b",
+					"hr",
+					"#80d8ff",
+					"#40c4ff",
+					"#00b0ff",
+					"#0091ea"
+				]
+			},
+			{
+				"name": "Blue",
+				"list": [
+					"#e3f2fd",
+					"#bbdefb",
+					"#90caf9",
+					"#64b5f6",
+					"#42a5f5",
+					"#2196f3",
+					"#1e88e5",
+					"#1976d2",
+					"#1565c0",
+					"#0d47a1",
+					"hr",
+					"#82b1ff",
+					"#448aff",
+					"#2979ff",
+					"#2962ff"
+				]
+			},
+			{
+				"name": "Indigo",
+				"list": [
+					"#e8eaf6",
+					"#c5cae9",
+					"#9fa8da",
+					"#7986cb",
+					"#5c6bc0",
+					"#3f51b5",
+					"#3949ab",
+					"#303f9f",
+					"#283593",
+					"#1a237e",
+					"hr",
+					"#8c9eff",
+					"#536dfe",
+					"#3d5afe",
+					"#304ffe"
+				]
+			},
+			{
+				"name": "Deep Purple",
+				"list": [
+					"#ede7f6",
+					"#d1c4e9",
+					"#b39ddb",
+					"#9575cd",
+					"#7e57c2",
+					"#673ab7",
+					"#5e35b1",
+					"#512da8",
+					"#4527a0",
+					"#311b92",
+					"hr",
+					"#b388ff",
+					"#7c4dff",
+					"#651fff",
+					"#6200ea"
+				]
+			},
+			{
+				"name": "Purple",
+				"list": [
+					"#f3e5f5",
+					"#e1bee7",
+					"#ce93d8",
+					"#ba68c8",
+					"#ab47bc",
+					"#9c27b0",
+					"#8e24aa",
+					"#7b1fa2",
+					"#6a1b9a",
+					"#4a148c",
+					"hr",
+					"#ea80fc",
+					"#e040fb",
+					"#d500f9",
+					"#aa00ff"
+				]
+			},
+			{
+				"name": "Pink",
+				"list": [
+					"#fce4ec",
+					"#f8bbd0",
+					"#f48fb1",
+					"#f06292",
+					"#ec407a",
+					"#e91e63",
+					"#d81b60",
+					"#c2185b",
+					"#ad1457",
+					"#880e4f",
+					"hr",
+					"#ff80ab",
+					"#ff4081",
+					"#f50057",
+					"#c51162"
+				]
+			},
+			{
+				"name": "Brown",
+				"list": ["#efebe9", "#d7ccc8", "#bcaaa4", "#a1887f", "#8d6e63", "#795548", "#6d4c41", "#5d4037", "#4e342e", "#3e2723"]
+			},
+			{
+				"name": "Grey",
+				"list": ["#fafafa", "#f5f5f5", "#eeeeee", "#e0e0e0", "#bdbdbd", "#9e9e9e", "#757575", "#616161", "#424242", "#212121"]
+			},
+			{
+				"name": "Blue Grey",
+				"list": ["#eceff1", "#cfd8dc", "#b0bec5", "#90a4ae", "#78909c", "#607d8b", "#546e7a", "#455a64", "#37474f", "#263238"]
+			}
+		]
+	}
+]

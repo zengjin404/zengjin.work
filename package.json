@@ -1,0 +1,26 @@
+{
+	"name": "api.zengjin",
+	"version": "1.0.0",
+	"description": "Vercel Functions API 项目",
+	"scripts": {
+		"serve": "vercel dev --local-config vercel.dev.json --listen 0.0.0.0:1232",
+		"preview": "node ./vite.preview.mjs"
+	},
+	"dependencies": {
+		"@vercel/node": "^2.15.1",
+		"dayjs": "^1.11.13",
+		"express": "^4.21.2",
+		"mysql2": "^3.6.5",
+		"pg": "^8.14.1",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-express": "^5.0.1"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-basic-ssl": "^2.0.0",
+		"chalk": "^5.4.1",
+		"nodemon": "^2.0.22",
+		"prettier": "^3.5.3",
+		"vercel": "^41.4.1",
+		"vite": "^6.2.3"
+	}
+}

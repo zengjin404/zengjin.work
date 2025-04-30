@@ -1,0 +1,1 @@
+import{p as o,o as s,a as r,c as l,y as n,q as p}from"./index-nc9jXHou.js";const u={__name:"Stamp",props:{theme:{type:String,default:"default"}},setup(e){const t=e;return o(),s(()=>{}),(a,c)=>(r(),l("div",{class:"Stamp",style:p(`color: var(--${t.theme})`)},[n(a.$slots,"default")],4))}};export{u as default};

@@ -1,0 +1,1 @@
+import{_ as s,m as a,l as t,o,b as r,c,d as n}from"./index-idhFCSvm.js";const _={__name:"藤蔓",setup(p){return a({}),t(),o(()=>{}),(l,e)=>(r(),c("section",null,e[0]||(e[0]=[n("iframe",{src:"/$apps/case/动画效果/藤蔓/"},null,-1)])))}},m=s(_,[["__scopeId","data-v-5128f2e0"]]);export{m as default};
