@@ -1,5 +1,5 @@
 window.$config = {
-	title: '前端实例',
+	title: '前端案例',
 	map_center: {
 		//地图初始中心点: 临沂市
 		lng: 118.35,

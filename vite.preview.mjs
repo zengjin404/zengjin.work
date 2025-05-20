@@ -10,7 +10,7 @@ let config = {
 	server: {
 		port: 1234,
 		host: true,
-		https: true,
+		// https: true,
 	},
 	// 将根目录设置为静态文件服务目录
 	root: '.',
@@ -19,7 +19,14 @@ let config = {
 	// 配置静态文件服务
 	publicDir: '.',
 	// https: true,
-	// proxy: {},
+	proxy: {
+		'/api/': {
+			// target: 'http://localhost:1232/',
+			target: 'https://zengjin.work/',
+			changeOrigin: true, // 是否改变源
+			secure: false, // 是否验证证书
+		},
+	},
 }
 
 try {

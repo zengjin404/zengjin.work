@@ -1,1 +1,0 @@
-import{_ as s,m as a,l as t,o,b as r,c as _,d as c}from"./index-idhFCSvm.js";const n={__name:"水面真实",setup(p){return a({}),t(),o(()=>{}),(l,e)=>(r(),_("section",null,e[0]||(e[0]=[c("iframe",{src:"/$apps/case/动画效果/水面真实/"},null,-1)])))}},m=s(n,[["__scopeId","data-v-685158f2"]]);export{m as default};

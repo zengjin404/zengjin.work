@@ -61,7 +61,7 @@ function open_dialog(type) {
 	</DialogModel>
 
 	<!-- <Logs v-model="state.logs" /> -->
-	<Precode url="/case/pages/其他js相关/预览文件.vue" />
+	<!-- <Precode url="/case/pages/其他js相关/预览文件.vue" /> -->
 </template>
 
 <style lang="less">

@@ -1,3 +1,3 @@
-window._config = {
+window.$config = {
 	title: '后台管理系统',
 }

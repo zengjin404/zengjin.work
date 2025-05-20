@@ -10,20 +10,23 @@ const state = reactive({
 	logs: [],
 })
 
+const intersectionObserver = new IntersectionObserver(
+	intersectionObserver_todo,
+	{ threshold: [0, 0.5, 1] }, //每个元素[即将显隐, 显隐一半, 完全显隐]时都会触发
+)
+
 onMounted(() => {
-	const intersectionObserver = new IntersectionObserver(
-		intersectionObserver_todo,
-		{ threshold: [0, 0.5, 1] }, //每个元素[即将显隐, 显隐一半, 完全显隐]时都会触发
-	)
 	intersectionObserver.observe(box1Ref.value) //初始化时也会触发
 	intersectionObserver.observe(box2Ref.value)
 })
 
-function intersectionObserver_todo(entries) {
-	if (!box1Ref.value || !box2Ref.value) return //销毁时也会触发, 所以要加兼容
+onBeforeUnmount(() => {
+	intersectionObserver.disconnect()
+})
 
-	entries.forEach(item => {
-		state.logs.push(`${item.target.textContent}显示比例：${item.intersectionRatio.toFixed(2) * 1}`)
+function intersectionObserver_todo(entries) {
+	entries.forEach(entry => {
+		state.logs.push(`${entry.target.textContent}显示：${entry.isIntersecting ? '是' : '否'}，比例：${entry.intersectionRatio.toFixed(2) * 1}`)
 	})
 }
 
