@@ -1,1 +1,0 @@
-import{r as o,o as r,c as s,d as l,v as n,n as c}from"./index-CBoDOpdG.js";const d={__name:"Stamp",props:{theme:{type:String,default:"default"}},setup(e){const t=e;return o(),r(()=>{}),(a,p)=>(l(),s("div",{class:"Stamp",style:c(`color: var(--${t.theme})`)},[n(a.$slots,"default")],4))}};export{d as default};

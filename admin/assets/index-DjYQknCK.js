@@ -1,1 +1,0 @@
-import{_ as t,c as o,d as l,e as n}from"./index-CBoDOpdG.js";const r={};function s(c,e){return l(),o("section",null,e[0]||(e[0]=[n("h1",null,"demo3",-1),n("input",null,null,-1)]))}const u=t(r,[["render",s]]);export{u as default};

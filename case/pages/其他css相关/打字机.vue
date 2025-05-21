@@ -17,17 +17,6 @@ const state = reactive({})
 
 <style lang="less" scoped>
 section {
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-	}
-
-	@keyframes caret {
-		50% {
-			border-right-color: var(--cl);
-		}
-	}
 
 	p {
 		font-size: 22px;
@@ -42,6 +31,19 @@ section {
 			/* 执行typing动画，在0.5s内执行完毕，分1段执行，循环执行10次 */
 		;
 		border-right: 1px solid transparent;
+
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes caret {
+			50% {
+				border-right-color: var(--cl);
+			}
+		}
 	}
 }
 </style>
