@@ -1,5 +1,5 @@
-import db from './_db'
-import base from './_base'
+import db from './_db.js'
+import base from './_base.js'
 
 const crud = {
 	get: {},

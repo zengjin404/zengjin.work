@@ -1,12 +1,12 @@
-import base from './_base/_base'
-import crud from './_base/_crud'
+import base from './_base/_base.js'
+import crud from './_base/_crud.js'
 const actions = { ...crud }
 
 const fields = 'id,user_id,title,abstract,content,img,createtime,updatetime,toptime'.split(',')
 const valids = 'title,abstract,content'.split(',')
 const joins = {}
 
-module.exports.default = async (req, resp) => {
+export default async (req, resp) => {
 	base.req = req
 	base.resp = resp
 	const { table, method, action, query, body } = base.getReqInfo()

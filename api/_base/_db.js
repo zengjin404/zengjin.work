@@ -1,4 +1,5 @@
-const { Pool } = require('pg')
+import pkg from 'pg'
+const { Pool } = pkg
 
 // neon
 const db = new Pool({
