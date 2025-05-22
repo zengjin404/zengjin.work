@@ -1,0 +1,1 @@
+import{bA as f,b5 as l,bB as b,bC as o}from"./index-QM50RDvt.js";import{b as c}from"./dep-fdffc704-D5c0DqCz.js";function m(n,r,t){for(var a=-1,u=r.length,s={};++a<u;){var e=r[a],i=f(n,e);t(i,e)&&c(s,l(e,n),i)}return s}function k(n,r){return m(n,r,function(t,a){return b(n,a)})}var g=o(function(n,r){return n==null?{}:k(n,r)});export{g as p};

@@ -1,0 +1,1 @@
+import{r as s,o as n,c as r,d as t,b as a}from"./index-QM50RDvt.js";const l={class:"Monitor"},c=["src"],_={__name:"Monitor",props:{url:{type:String,default:""}},setup(o){const e=o;return s(""),n(()=>{}),(u,i)=>(t(),r("div",l,[e.url?(t(),r("iframe",{key:0,src:`plugin/JnWebPlayer/play_url.html?url=${e.url}`},null,8,c)):a("v-if",!0)]))}};export{_ as default};
