@@ -1,0 +1,269 @@
+<script src="/$base/plugin/twgl.js-6.1.1/twgl.min.js"></script>
+<style>
+	html {
+		height: 100%;
+	}
+	body {
+		background: #333;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	canvas {
+		height: 100%;
+		width: 100%;
+	}
+
+	.controls {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		background: #0008;
+		padding: 15px;
+		border-radius: 8px;
+		z-index: 1000;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.changePattern {
+		padding: 8px 14px;
+		background: #fff4;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 14px;
+		z-index: 1000;
+	}
+
+	.changePattern:hover {
+		background: #fff5;
+	}
+	.changeSpeedBar {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: white;
+		font-size: 14px;
+	}
+
+	.changeSpeedBar input[type='range'] {
+		width: 150px;
+		height: 4px;
+		background: #fff4;
+		border-radius: 2px;
+		outline: none;
+		appearance: none;
+	}
+
+	.changeSpeedBar input[type='range']::-webkit-slider-thumb {
+		appearance: none;
+		width: 16px;
+		height: 16px;
+		background: white;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.changeSpeedBar input[type='range']::-moz-range-thumb {
+		width: 16px;
+		height: 16px;
+		background: white;
+		border-radius: 50%;
+		cursor: pointer;
+		border: none;
+	}
+</style>
+<div class="controls">
+	<button class="changePattern">变换图案</button>
+	<div class="changeSpeedBar">
+		<label>颜色速度</label>
+		<input class="changeSpeed" type="range" value="0.5" min="0.01" max="1" step="0.01" />
+	</div>
+</div>
+<canvas class="canvas"></canvas>
+
+<!-- VertexShader code here -->
+<script id="vertexShader" type="x-shader/x-vertex">
+	#version 300 es
+	precision highp float;
+	  in vec4 position;
+	  void main() {
+	    gl_Position = vec4( position );
+	  }
+</script>
+
+<!-- FragmentShader code here -->
+<script id="fragmentShader" type="x-shader/x-fragment">
+	#version 300 es
+	#if __VERSION__ < 130
+	#define TEXTURE2D texture2D
+	#else
+	#define TEXTURE2D texture
+	#endif
+	precision highp float;
+	out vec4 fragColor;
+	uniform vec2 u_resolution;
+	uniform vec4 u_mouse;
+	uniform float u_time;
+	uniform float u_pattern_time;
+	uniform float u_color_time;
+	uniform sampler2D iChannel0;
+	uniform sampler2D iChannel1;
+
+	#define R   u_resolution
+	#define T   u_time
+	#define PT  u_pattern_time
+	#define CT  u_color_time
+	#define M   u_mouse
+
+	#define PI  3.1415926
+
+	float seed = 11.32;
+
+	float hash21(vec2 a) {
+	    return fract(sin(dot(a, vec2(27.69, 32.53)+seed))*437.53);
+	}
+
+	vec3 hue(float t) {
+	    vec3 c = vec3(.95,.93,.89),
+	         d = vec3(.95,.61,.23);
+	    return vec3(.35) + vec3(.25)*cos( PI*(c*t+d) );
+	}
+
+	void main( )
+	{
+	    vec2 F = gl_FragCoord.xy;
+	    seed = 11.32+floor(PT);
+	    vec2 uv = F.xy/max(R.x,R.y), nv = uv;
+
+	    vec3 C = vec3(.075);
+
+	    // enlarge scale for bigger screen
+	    float scale = R.x>1200. ? 7.9 : 5.9;
+
+	    float px = fwidth(uv.x*scale);
+	    vec2 id = floor(uv*scale), p = fract(uv*scale)-.5;
+
+	    float hs = hash21(id);
+	    float tk = .0035, mx = .0095, fx = 184.;
+
+	    if(hs>.73) {
+	        scale *=2., tk *=2., mx *=2.;
+	        fx /= 2.;
+	        id = floor(uv*scale), p = fract(uv*scale)-.5;
+	        hs = hash21(id);
+
+	        if(fract(hs*43.71)>.85) {
+	            scale *=2., tk *=2., mx *=2.;
+	            fx /= 2.;
+	            id = floor(uv*scale), p = fract(uv*scale)-.5;
+	            hs = hash21(id);
+	        }
+	    }
+
+	    float rnd = fract(hs*37.32);
+	    if(rnd>.5) p.x=-p.x;
+	    if(rnd>.75 || rnd<.25) p.y=-p.y;
+
+	    rnd = fract(hs*32.27);
+
+	    vec3 H = rnd>.65 ? hue(CT+(hs*1.23)+rnd) : vec3(1);
+	    float d = p.x+p.y, f = p.x-p.y;
+
+	    float t = fract(hs*32.27)>.65 ? (f+1.15)*1.5 : (p.y+.15)*1.75;
+
+	    vec3 k = mix(C,vec3(1),clamp(t,0.,1.));
+	    // add shadow and colors
+	    C = mix(C,k,smoothstep(px,-px,f));
+	    C = mix(C,H,smoothstep(px,-px,d));
+
+	    // stiching
+	    if(fract(hs*47.32)>.425) {
+	        float b = (p.y+mx)+(p.x+mx);
+	        float v = max(length(b)-tk, .5+10.*sin((p.y-p.x)*fx));
+	        C = mix(C,C*vec3(.35),smoothstep(px,-px,v));
+	    }
+
+	    // static effect
+	    nv = floor(nv*(160.*R.x/R.y))/(160.*R.x/R.y);
+	    C = mix(C,clamp(C-.03,vec3(0),C),hash21(nv+id+uv));
+
+	    // Output to screen
+	    fragColor = vec4(pow(C, vec3(.4545)),1);
+	}
+</script>
+
+<script>
+	// WEBGL BOOTSTRAP TWGL.js
+	const glcanvas = document.querySelector('.canvas')
+	const gl = glcanvas.getContext('webgl2')
+
+	// Fractal code in HTML window - Fragment Shader //
+	const programInfo = twgl.createProgramInfo(gl, ['vertexShader', 'fragmentShader'])
+
+	const arrays = {
+		position: [-1, -1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, -1, 0, 1, 1, 0],
+	}
+
+	const bufferInfo = twgl.createBufferInfoFromArrays(gl, arrays)
+
+	const changePattern = document.querySelector('.changePattern')
+	const changeSpeed = document.querySelector('.changeSpeed')
+
+	let patternTime = 0
+	let colorSpeed = changeSpeed.value // 默认速度值
+	let colorTime = 0 // 累积的颜色时间
+	let lastTime = 0 // 上一帧的时间
+	let patternCounter = 0 // 图案计数器
+
+	changePattern.addEventListener('click', () => {
+		patternCounter++
+		patternTime = patternCounter
+	})
+
+	changeSpeed.addEventListener('input', e => {
+		colorSpeed = parseFloat(e.target.value)
+	})
+
+	// RENDER LOOP
+	const render = time => {
+		twgl.resizeCanvasToDisplaySize(gl.canvas, 1.0)
+
+		gl.viewport(0, 0, gl.canvas.width, gl.canvas.height)
+
+		// 计算时间增量并更新累积时间
+		const currentTime = time * 0.001
+		const deltaTime = currentTime - lastTime
+		colorTime += deltaTime * colorSpeed
+		lastTime = currentTime
+
+		let uniforms = {
+			u_time: currentTime,
+			u_pattern_time: patternTime,
+			u_color_time: colorTime,
+			u_resolution: [gl.canvas.width, gl.canvas.height],
+		}
+
+		gl.useProgram(programInfo.program)
+		twgl.setBuffersAndAttributes(gl, programInfo, bufferInfo)
+		twgl.setUniforms(programInfo, uniforms)
+		twgl.drawBufferInfo(gl, bufferInfo)
+
+		requestAnimationFrame(render)
+	}
+
+	// DOM READY
+	window.addEventListener('DOMContentLoaded', event => {
+		lastTime = performance.now() * 0.001
+		requestAnimationFrame(render)
+	})
+</script>

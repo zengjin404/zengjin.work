@@ -1,4 +1,4 @@
-import { createServer } from 'vite'
+import { createServer, preview } from 'vite'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import chalk from 'chalk'
 
@@ -6,12 +6,15 @@ let config = {
 	// 将根目录设置为静态文件服务目录
 	// root: '.',
 	// 配置静态文件服务
-	publicDir: '.',
-	define: {
-		__DEFINES__: JSON.stringify(process.env),
+	build: {
+		outDir: '.',
 	},
+	// publicDir: '.',
+	// define: {
+	// 	__DEFINES__: JSON.stringify(process.env),
+	// },
 	plugins: [basicSsl()],
-	server: {
+	preview: {
 		port: 1234,
 		host: true,
 		// https: true,
@@ -27,9 +30,8 @@ let config = {
 }
 
 try {
-	const server = await createServer(config)
-	await server.listen()
+	const server = await preview(config)
 	server.printUrls()
 } catch (e) {
-	console.log(chalk.red(`服务启动失败，${e}`))
+	console.log(chalk.red(`预览失败，${e}`))
 }

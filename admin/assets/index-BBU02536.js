@@ -1,0 +1,1 @@
+import{_ as t,L as s,N as a,c as o,d as n,e as c,t as r,u as _}from"./index-B3vlFQpO.js";const u={__name:"index",setup(i){const e=$config.title;return s(),a(),(l,f)=>(n(),o("section",null,[c("h1",null,r(_(e)),1)]))}},d=t(u,[["__scopeId","data-v-ab8f63df"]]);export{d as default};
