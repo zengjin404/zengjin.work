@@ -1,0 +1,1 @@
+import{a7 as n,ac as l}from"./index-apoUTNGF.js";var g="Expected a function";function d(i,t,r){var a=!0,e=!0;if(typeof i!="function")throw new TypeError(g);return n(r)&&(a="leading"in r?!!r.leading:a,e="trailing"in r?!!r.trailing:e),l(i,t,{leading:a,maxWait:t,trailing:e})}export{d as t};

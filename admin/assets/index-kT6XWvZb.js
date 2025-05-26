@@ -1,1 +1,0 @@
-import{_ as t,c as n,d as s,e as a}from"./index-B3vlFQpO.js";const o=Object.assign({name:Math.random().toString(36).slice(2)},{__name:"index",setup(r){return(c,e)=>(s(),n("section",null,e[0]||(e[0]=[a("h1",null,"系统状态",-1)])))}}),d=t(o,[["__scopeId","data-v-18d415eb"]]);export{d as default};

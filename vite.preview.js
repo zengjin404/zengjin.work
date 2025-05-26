@@ -20,8 +20,8 @@ let config = {
 		// https: true,
 		proxy: {
 			'/api/': {
-				// target: 'http://localhost:1232/',
-				target: 'https://zengjin.work/',
+				target: 'http://localhost:1232/',
+				// target: 'https://zengjin.work/',
 				changeOrigin: true, // 是否改变源
 				secure: false, // 是否验证证书
 			},

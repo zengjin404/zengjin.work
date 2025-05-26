@@ -1,0 +1,1 @@
+import{_ as o,c as t,d as l,e as n}from"./index-Bn-oThvH.js";const r={};function s(c,e){return l(),t("section",null,e[0]||(e[0]=[n("h1",null,"demo4_1",-1),n("input",null,null,-1)]))}const _=o(r,[["render",s]]);export{_ as default};
