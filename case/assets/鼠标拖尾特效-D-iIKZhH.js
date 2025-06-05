@@ -1,1 +1,0 @@
-import{_ as s,k as a,m as t,j as _,c as o,o as c,b as r}from"./index-apoUTNGF.js";const n={__name:"鼠标拖尾特效",setup(p){return a({}),t(),_(()=>{}),(l,e)=>(c(),o("section",null,e[0]||(e[0]=[r("iframe",{src:"/$apps/case/交互效果/鼠标拖尾特效/"},null,-1)])))}},m=s(n,[["__scopeId","data-v-19cc795f"]]);export{m as default};

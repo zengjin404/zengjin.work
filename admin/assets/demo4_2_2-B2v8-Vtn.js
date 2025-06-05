@@ -1,0 +1,1 @@
+import{_ as o,c as t,d as l,e as n}from"./index-CyAhEjtT.js";const r={};function s(c,e){return l(),t("section",null,e[0]||(e[0]=[n("h1",null,"demo4_2_2",-1),n("input",null,null,-1)]))}const a=o(r,[["render",s]]);export{a as default};
