@@ -1,4 +1,5 @@
 window.$config = {
+	app: 'case', 
 	title: '前端案例',
 	map_center: {
 		//地图初始中心点: 临沂市
