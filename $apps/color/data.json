@@ -1,7 +1,8 @@
 [
 	{
-		"name": "Tailwind CSS v4",
-		"primary": 6,
+		"name": "Tailwind CSS - v4",
+		"link": "https://tailwindcss.com/docs/colors",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -94,8 +95,9 @@
 		]
 	},
 	{
-		"name": "Tailwind CSS v3",
-		"primary": 6,
+		"name": "Tailwind CSS - v3",
+		"link": "https://v3.tailwindcss.com/docs/customizing-colors",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -188,8 +190,9 @@
 		]
 	},
 	{
-		"name": "Tailwind CSS v2",
-		"primary": 6,
+		"name": "Tailwind CSS - v2",
+		"link": "https://v2.tailwindcss.com/docs/customizing-colors",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -226,8 +229,9 @@
 		]
 	},
 	{
-		"name": "Tailwind CSS v1",
-		"primary": 5,
+		"name": "Tailwind CSS - v1",
+		"link": "https://v1.tailwindcss.com/docs/customizing-colors",
+		"main": 4,
 		"list": [
 			{
 				"name": "Red",
@@ -273,7 +277,8 @@
 	},
 	{
 		"name": "Ant Design",
-		"primary": 6,
+		"link": "https://ant.design/docs/spec/colors-cn",
+		"main": 5,
 		"list": [
 			{
 				"name": "Dust Red",
@@ -350,146 +355,94 @@
 			{
 				"name": "Gray",
 				"nameZH": "中性灰",
-				"list": ["#ffffff", "#fafafa", "#f5f5f5", "#e8e8e8", "#d9d9d9", "#bfbfbf", "#8c8c8c", "#595959", "#262626", "#000000"]
+				"list": ["#fafafa", "#f5f5f5", "#f0f0f0", "#d9d9d9", "#bfbfbf", "#8c8c8c", "#595959", "#434343", "#262626", "#1f1f1f", "#141414"]
 			}
 		]
 	},
 	{
-		"name": "ColorUI GA",
-		"primary": 7,
+		"name": "Ant Design (dark)",
+		"link": "https://ant.design/docs/spec/dark-cn",
+		"main": 5,
 		"list": [
 			{
-				"name": "Red",
-				"list": ["#fff5f5", "#ffe3e3", "#ffc9c9", "#ffa8a8", "#ff8787", "#ff6b6b", "#fa5252", "#f03e3e", "#e03131", "#c92a2a"]
+				"name": "Dust Red",
+				"nameZH": "薄暮",
+				"info": "斗志、奔放",
+				"list": ["#2a1215", "#431418", "#58181c", "#791a1f", "#a61d24", "#d32029", "#e84749", "#f37370", "#f89f9a", "#fac8c3"]
 			},
 			{
-				"name": "Orange",
-				"list": ["#fff4e6", "#ffe8cc", "#ffd8a8", "#ffc078", "#ffa94d", "#ff922b", "#fd7e14", "#f76707", "#e8590c", "#d9480f"]
+				"name": "Volcano",
+				"nameZH": "火山",
+				"info": "醒目、澎湃",
+				"list": ["#2b1611", "#441d12", "#592716", "#7c3118", "#aa3e19", "#d84a1b", "#e87040", "#f3956a", "#f8b692", "#fad4bc"]
 			},
 			{
-				"name": "Yellow",
-				"list": ["#fff9db", "#fff3bf", "#ffec99", "#ffe066", "#ffd43b", "#fcc419", "#fab005", "#f59f00", "#f08c00", "#e67700"]
+				"name": "Sunset Orange",
+				"nameZH": "日暮",
+				"info": "温暖、欢快",
+				"list": ["#2b1d11", "#442a11", "#593815", "#7c4a15", "#aa6215", "#d87a16", "#e89a3c", "#f3b765", "#f8cf8d", "#fae3b7"]
+			},
+			{
+				"name": "Calendula Gold",
+				"nameZH": "金盏花",
+				"info": "活力、积极",
+				"list": ["#2b2111", "#443111", "#594214", "#7c5914", "#aa7714", "#d89614", "#e8b339", "#f3cc62", "#f8df8b", "#faedb5"]
+			},
+			{
+				"name": "Sunrise Yellow",
+				"nameZH": "日出",
+				"info": "出生、阳光",
+				"list": ["#2b2611", "#443b11", "#595014", "#7c6e14", "#aa9514", "#d8bd14", "#e8d639", "#f3ea62", "#f8f48b", "#fafab5"]
 			},
 			{
 				"name": "Lime",
-				"list": ["#f4fce3", "#e9fac8", "#d8f5a2", "#c0eb75", "#a9e34b", "#94d82d", "#82c91e", "#74b816", "#66a80f", "#5c940d"]
+				"nameZH": "青柠",
+				"info": "自然、生机",
+				"list": ["#1f2611", "#2e3c10", "#3e4f13", "#536d13", "#6f9412", "#8bbb11", "#a9d134", "#c9e75d", "#e4f88b", "#f0fab5"]
 			},
 			{
-				"name": "Green",
-				"list": ["#ebfbee", "#d3f9d8", "#b2f2bb", "#8ce99a", "#69db7c", "#51cf66", "#40c057", "#37b24d", "#2f9e44", "#2b8a3e"]
-			},
-			{
-				"name": "Teal",
-				"list": ["#e6fcf5", "#c3fae8", "#96f2d7", "#63e6be", "#38d9a9", "#20c997", "#12b886", "#0ca678", "#099268", "#087f5b"]
-			},
-			{
-				"name": "Cyan",
-				"list": ["#e3fafc", "#c5f6fa", "#99e9f2", "#66d9e8", "#3bc9db", "#22b8cf", "#15aabf", "#1098ad", "#0c8599", "#0b7285"]
-			},
-			{
-				"name": "Blue",
-				"list": ["#e7f5ff", "#d0ebff", "#a5d8ff", "#74c0fc", "#4dabf7", "#339af0", "#228be6", "#1c7ed6", "#1971c2", "#1864ab"]
-			},
-			{
-				"name": "Indigo",
-				"list": ["#edf2ff", "#dbe4ff", "#bac8ff", "#91a7ff", "#748ffc", "#5c7cfa", "#4c6ef5", "#4263eb", "#3b5bdb", "#364fc7"]
-			},
-			{
-				"name": "Violet",
-				"list": ["#f3f0ff", "#e5dbff", "#d0bfff", "#b197fc", "#9775fa", "#845ef7", "#7950f2", "#7048e8", "#6741d9", "#5f3dc4"]
-			},
-			{
-				"name": "Grape",
-				"list": ["#f8f0fc", "#f3d9fa", "#eebefa", "#e599f7", "#da77f2", "#cc5de8", "#be4bdb", "#ae3ec9", "#9c36b5", "#862e9c"]
-			},
-			{
-				"name": "Pink",
-				"list": ["#fff0f6", "#ffdeeb", "#fcc2d7", "#faa2c1", "#f783ac", "#f06595", "#e64980", "#d6336c", "#c2255c", "#a61e4d"]
-			},
-			{
-				"name": "Gray",
-				"list": ["#f8f9fa", "#f1f3f5", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd", "#868e96", "#495057", "#343a40", "#212529"]
-			}
-		]
-	},
-	{
-		"name": "ColorUI",
-		"list": [
-			{
-				"name": "Red",
-				"nameZH": "嫣红",
-				"list": ["#fadbd9", "#e54d42"]
-			},
-			{
-				"name": "Orange",
-				"nameZH": "桔橙",
-				"list": ["#fde6d2", "#f37b1d"]
-			},
-			{
-				"name": "Yellow",
-				"nameZH": "明黄",
-				"list": ["#fef4d6", "#fbbd08"]
-			},
-			{
-				"name": "Olive",
-				"nameZH": "橄榄",
-				"list": ["#e8f4d9", "#8dc63f"]
-			},
-			{
-				"name": "Green",
-				"nameZH": "森绿",
-				"list": ["#d7f0db", "#39b54a"]
+				"name": "Polar Green",
+				"nameZH": "极光绿",
+				"info": "健康、创新",
+				"list": ["#162312", "#1d3712", "#274916", "#306317", "#3c8618", "#49aa19", "#6abe39", "#8fd460", "#b2e58b", "#d5f2bb"]
 			},
 			{
 				"name": "Cyan",
-				"nameZH": "天青",
-				"list": ["#d2f1f0", "#1cbbb4"]
+				"nameZH": "明青",
+				"info": "希望、坚强",
+				"list": ["#112123", "#113536", "#144848", "#146262", "#138585", "#13a8a8", "#33bcb7", "#58d1c9", "#84e2d8", "#b2f1e8"]
 			},
 			{
-				"name": "Blue",
-				"nameZH": "海蓝",
-				"list": ["#cce6ff", "#0081ff"]
+				"name": "Daybreak Blue",
+				"nameZH": "拂晓蓝",
+				"info": "包容、科技、普惠",
+				"list": ["#111a2c", "#112545", "#15325b", "#15417e", "#1554ad", "#1668dc", "#3c89e8", "#65a9f3", "#8dc5f8", "#b7dcfa"]
 			},
 			{
-				"name": "Purple",
-				"nameZH": "姹紫",
-				"list": ["#e1d7f0", "#6739b6"]
+				"name": "Geek Blue",
+				"nameZH": "极客蓝",
+				"info": "探索、钻研",
+				"list": ["#131629", "#161d40", "#1c2755", "#203175", "#263ea0", "#2b4acb", "#5273e0", "#7f9ef3", "#a8c1f8", "#d2e0fa"]
 			},
 			{
-				"name": "Mauve",
-				"nameZH": "木槿",
-				"list": ["#ebd4ef", "#9c26b0"]
+				"name": "Golden Purple",
+				"nameZH": "酱紫",
+				"info": "优雅、浪漫",
+				"list": ["#1a1325", "#24163a", "#301c4d", "#3e2069", "#51258f", "#642ab5", "#854eca", "#ab7ae0", "#cda8f0", "#ebd7fa"]
 			},
 			{
-				"name": "Pink",
-				"nameZH": "桃粉",
-				"list": ["#f9d7ea", "#e03997"]
-			},
-			{
-				"name": "Brown",
-				"nameZH": "棕褐",
-				"list": ["#ede1d9", "#a5673f"]
-			},
-			{
-				"name": "Gray",
-				"nameZH": "草灰",
-				"list": ["#f0f0f0", "#aaaaaa"]
-			},
-			{
-				"name": "Grey",
-				"nameZH": "玄灰",
-				"list": ["#e7ebed", "#8799a3"]
-			},
-			{
-				"name": "White & Black",
-				"nameZH": "雅白 & 墨黑",
-				"list": ["#ffffff", "#333333"]
+				"name": "Magenta",
+				"nameZH": "法式洋红",
+				"info": "明快、感性",
+				"list": ["#291321", "#40162f", "#551c3b", "#75204f", "#a02669", "#cb2b83", "#e0529c", "#f37fb7", "#f8a8cc", "#fad2e3"]
 			}
 		]
 	},
+
 	{
 		"name": "Arco Design",
-		"primary": 6,
+		"link": "https://arco.design/react/docs/palette",
+		"main": 6,
 		"list": [
 			{
 				"name": "Red",
@@ -565,7 +518,8 @@
 	},
 	{
 		"name": "Arco Design (dark)",
-		"primary": 5,
+		"link": "https://arco.design/react/docs/palette",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -640,8 +594,9 @@
 		]
 	},
 	{
-		"name": "semi design",
-		"primary": 6,
+		"name": "Semi Design",
+		"link": "https://semi.design/zh-CN/basic/tokens",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -710,8 +665,9 @@
 		]
 	},
 	{
-		"name": "semi design (dark)",
-		"primary": 5,
+		"name": "Semi Design (dark)",
+		"link": "https://semi.design/zh-CN/basic/tokens",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -781,7 +737,8 @@
 	},
 	{
 		"name": "Material Design",
-		"primary": 6,
+		"link": "https://m1.material.io/style/color.html#color-color-palette",
+		"main": 5,
 		"list": [
 			{
 				"name": "Red",
@@ -1114,6 +1071,638 @@
 			{
 				"name": "Blue Grey",
 				"list": ["#eceff1", "#cfd8dc", "#b0bec5", "#90a4ae", "#78909c", "#607d8b", "#546e7a", "#455a64", "#37474f", "#263238"]
+			}
+		]
+	},
+	{
+		"name": "TDesign",
+		"link": "https://tdesign.tencent.com/design/color",
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#fff0ed", "#ffd8d2", "#ffb9b0", "#ff9285", "#f6685d", "#d54941", "#ad352f", "#881f1c", "#68070a", "#490002", "hr", "#d54941"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#fff1e9", "#ffd9c2", "#ffb98c", "#fa9550", "#e37318", "#be5a00", "#954500", "#713300", "#532300", "#3b1700", "hr", "#e37318"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#fff5e4", "#ffe7b5", "#ffd36d", "#f5ba18", "#d8a100", "#b38500", "#8b6600", "#654900", "#443000", "#2b1d00", "hr", "#f5ba18"]
+			},
+			{
+				"name": "Green",
+				"list": ["#e3f9e9", "#c6f3d7", "#92dab2", "#56c08d", "#2ba471", "#008858", "#006c45", "#005334", "#003b23", "#002515", "hr", "#2ba471"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#e8f5ff", "#c4e8ff", "#85d3ff", "#41b8f2", "#029cd4", "#0080b0", "#00668e", "#004e6d", "#003850", "#002536", "hr", "#029cd4"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#f2f3ff", "#d9e1ff", "#b5c7ff", "#8eabff", "#618dff", "#366ef4", "#0052d9", "#003cab", "#002a7c", "#001a57", "hr", "#0052d9"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#fbf0ff", "#eedcff", "#dcbfff", "#c69cff", "#ad75fe", "#8e56dd", "#7137bf", "#5610a4", "#3b007b", "#280057", "hr", "#8e56dd"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#fff0f6", "#ffd8eb", "#ffaedc", "#ff79cd", "#e851b3", "#c43695", "#a12279", "#800a5f", "#610046", "#43002f", "hr", "#e851b3"]
+			},
+			{
+				"name": "Brand",
+				"list": [
+					"#f2f3ff",
+					"#ebedff",
+					"#e3e7ff",
+					"#d3dcff",
+					"#b4c5ff",
+					"#84a2ff",
+					"#5885ff",
+					"#366ef4",
+					"#0052d9",
+					"#0042b2",
+					"#00328b",
+					"#00266e",
+					"#001e5c",
+					"#001442",
+					"hr",
+					"#0052d9"
+				]
+			},
+			{
+				"name": "BlueGray",
+				"list": [
+					"#f3f3f4",
+					"#eeeef0",
+					"#e7e8eb",
+					"#dcdde1",
+					"#c4c6cd",
+					"#a2a6b1",
+					"#858a99",
+					"#6f7686",
+					"#535d6d",
+					"#424a57",
+					"#323843",
+					"#272b34",
+					"#20232b",
+					"#15181d",
+					"hr",
+					"#5e5e5e"
+				]
+			},
+			{
+				"name": "Gray",
+				"list": [
+					"#f3f3f3",
+					"#eeeeee",
+					"#e8e8e8",
+					"#dddddd",
+					"#c6c6c6",
+					"#a6a6a6",
+					"#8b8b8b",
+					"#777777",
+					"#5e5e5e",
+					"#4b4b4b",
+					"#393939",
+					"#2c2c2c",
+					"#242424",
+					"#181818",
+					"hr",
+					"#535d6d"
+				]
+			}
+		]
+	},
+	{
+		"name": "Element Plus",
+		"link": "https://element-plus.org/zh-CN/component/color.html",
+		"main": 5,
+		"list": [
+			{
+				"name": "Danger",
+				"list": ["#fef0f0", "#fde2e2", "#fcd3d3", "#fab6b6", "#f89898", "#f56c6c", "#c45656"]
+			},
+			{
+				"name": "Warning",
+				"list": ["#fdf6ec", "#faecd8", "#f8e3c5", "#f3d19e", "#eebe77", "#e6a23c", "#b88230"]
+			},
+			{
+				"name": "Success",
+				"list": ["#f0f9eb", "#e1f3d8", "#d1edc4", "#b3e19d", "#95d475", "#67c23a", "#529b2e"]
+			},
+			{
+				"name": "Brand",
+				"list": ["#ecf5ff", "#d9ecff", "#c6e2ff", "#a0cfff", "#79bbff", "#409eff", "#337ecc"]
+			},
+			{
+				"name": "Info",
+				"list": ["#f4f4f5", "#e9e9eb", "#dedfe0", "#c8c9cc", "#b1b3b8", "#909399", "#73767a"]
+			},
+			{
+				"name": "Text",
+				"list": ["", "#c0c4cc", "#a8abb2", "#909399", "#606266", "#303133"]
+			},
+			{
+				"name": "Border",
+				"list": ["", "", "#f2f6fc", "#ebeef5", "#e4e7ed", "#dcdfe6", "#d4d7de", "#cdd0d6"]
+			},
+			{
+				"name": "Fill",
+				"list": ["", "", "#fafcff", "#fafafa", "#f5f7fa", "#f0f2f5", "#ebedf0", "#e6e8eb"]
+			}
+		]
+	},
+
+	{
+		"name": "Open color",
+		"main": 6,
+		"link": "https://yeun.github.io/open-color/",
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#fff5f5", "#ffe3e3", "#ffc9c9", "#ffa8a8", "#ff8787", "#ff6b6b", "#fa5252", "#f03e3e", "#e03131", "#c92a2a"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#fff4e6", "#ffe8cc", "#ffd8a8", "#ffc078", "#ffa94d", "#ff922b", "#fd7e14", "#f76707", "#e8590c", "#d9480f"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#fff9db", "#fff3bf", "#ffec99", "#ffe066", "#ffd43b", "#fcc419", "#fab005", "#f59f00", "#f08c00", "#e67700"]
+			},
+			{
+				"name": "Lime",
+				"list": ["#f4fce3", "#e9fac8", "#d8f5a2", "#c0eb75", "#a9e34b", "#94d82d", "#82c91e", "#74b816", "#66a80f", "#5c940d"]
+			},
+			{
+				"name": "Green",
+				"list": ["#ebfbee", "#d3f9d8", "#b2f2bb", "#8ce99a", "#69db7c", "#51cf66", "#40c057", "#37b24d", "#2f9e44", "#2b8a3e"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#e6fcf5", "#c3fae8", "#96f2d7", "#63e6be", "#38d9a9", "#20c997", "#12b886", "#0ca678", "#099268", "#087f5b"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#e3fafc", "#c5f6fa", "#99e9f2", "#66d9e8", "#3bc9db", "#22b8cf", "#15aabf", "#1098ad", "#0c8599", "#0b7285"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#e7f5ff", "#d0ebff", "#a5d8ff", "#74c0fc", "#4dabf7", "#339af0", "#228be6", "#1c7ed6", "#1971c2", "#1864ab"]
+			},
+			{
+				"name": "Indigo",
+				"list": ["#edf2ff", "#dbe4ff", "#bac8ff", "#91a7ff", "#748ffc", "#5c7cfa", "#4c6ef5", "#4263eb", "#3b5bdb", "#364fc7"]
+			},
+			{
+				"name": "Violet",
+				"list": ["#f3f0ff", "#e5dbff", "#d0bfff", "#b197fc", "#9775fa", "#845ef7", "#7950f2", "#7048e8", "#6741d9", "#5f3dc4"]
+			},
+			{
+				"name": "Grape",
+				"list": ["#f8f0fc", "#f3d9fa", "#eebefa", "#e599f7", "#da77f2", "#cc5de8", "#be4bdb", "#ae3ec9", "#9c36b5", "#862e9c"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#fff0f6", "#ffdeeb", "#fcc2d7", "#faa2c1", "#f783ac", "#f06595", "#e64980", "#d6336c", "#c2255c", "#a61e4d"]
+			},
+			{
+				"name": "Gray",
+				"list": ["#f8f9fa", "#f1f3f5", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd", "#868e96", "#495057", "#343a40", "#212529"]
+			}
+		]
+	},
+	{
+		"name": "MP-CU",
+		"link": "https://mp.color-ui.com/guide/background.html#基础背景色",
+		"list": [
+			{
+				"name": "Red",
+				"namezh": "嫣红",
+				"list": ["#fcedec", "#e54d42"]
+			},
+			{
+				"name": "Orange",
+				"namezh": "橘橙",
+				"list": ["#fef2e8", "#f37b1d"]
+			},
+			{
+				"name": "Yellow",
+				"namezh": "明黄",
+				"list": ["#fff8e6", "#fbbd08"]
+			},
+			{
+				"name": "Olive",
+				"namezh": "橄榄",
+				"list": ["#f3f9eb", "#8dc63f"]
+			},
+			{
+				"name": "Green",
+				"namezh": "森绿",
+				"list": ["#ebf8eb", "#3eb93b"]
+			},
+			{
+				"name": "Teal",
+				"namezh": "水鸭 *",
+				"list": ["#e8f8f7", "#1cbbb4"]
+			},
+			{
+				"name": "Cyan",
+				"namezh": "天青 *",
+				"list": ["#ebf9ff", "#37c0fe"]
+			},
+			{
+				"name": "Blue",
+				"namezh": "海蓝",
+				"list": ["#e5f2ff", "#0081ff"]
+			},
+			{
+				"name": "Purple",
+				"namezh": "姹紫 *",
+				"list": ["#f2ecfc", "#8044de"]
+			},
+			{
+				"name": "Mauve",
+				"namezh": "木槿",
+				"list": ["#f8ecfa", "#b745cb"]
+			},
+			{
+				"name": "Pink",
+				"namezh": "桃粉",
+				"list": ["#fcebf4", "#e03997"]
+			},
+			{
+				"name": "Brown",
+				"namezh": "棕褐",
+				"list": ["#f6f0eb", "#a5673f"]
+			},
+			{
+				"name": "Grey",
+				"namezh": "玄灰",
+				"list": ["#f3f5f6", "#8799a3"]
+			}
+		]
+	},
+	{
+		"name": "MP-CU - 渐变",
+		"link": "https://mp.color-ui.com/guide/background.html#渐变背景色",
+		"list": [
+			{
+				"name": "Red",
+				"nameZH": "嫣红",
+				"list": ["linear-gradient(45deg, #ffffff, #fbe4e3)", "linear-gradient(45deg, #f33a41, #ed0586)"]
+			},
+			{
+				"name": "Orange",
+				"nameZH": "橘橙",
+				"list": ["linear-gradient(45deg, #ffffff, #fdebdd)", "linear-gradient(45deg, #ff9700, #ed1c24)"]
+			},
+			{
+				"name": "Yellow",
+				"nameZH": "明黄",
+				"list": ["linear-gradient(45deg, #ffffff, #fef5da)", "linear-gradient(45deg, #f5fe00, #ff6600)"]
+			},
+			{
+				"name": "Olive",
+				"nameZH": "橄榄",
+				"list": ["linear-gradient(45deg, #ffffff, #eef6e2)", "linear-gradient(45deg, #90e630, #39d266)"]
+			},
+			{
+				"name": "Green",
+				"nameZH": "森绿",
+				"list": ["linear-gradient(45deg, #ffffff, #e2f5e2)", "linear-gradient(45deg, #3ab54a, #8cc63f)"]
+			},
+			{
+				"name": "",
+				"nameZH": "",
+				"list": [""]
+			},
+			{
+				"name": "Cyan",
+				"nameZH": "天青",
+				"list": ["linear-gradient(45deg, #ffffff, #e1f6ff)", "linear-gradient(45deg, #06edfe, #48b2fe)"]
+			},
+			{
+				"name": "Blue",
+				"nameZH": "海蓝",
+				"list": ["linear-gradient(45deg, #ffffff, #d9ecff)", "linear-gradient(45deg, #00b8f9, #0166eb)"]
+			},
+			{
+				"name": "Purple",
+				"nameZH": "姹紫",
+				"list": ["linear-gradient(45deg, #ffffff, #ece3fa)", "linear-gradient(45deg, #9829ea, #5908fb)"]
+			},
+			{
+				"name": "Mauve",
+				"nameZH": "木槿",
+				"list": ["linear-gradient(45deg, #ffffff, #f4e3f7)", "linear-gradient(45deg, #c01f95, #7115cc)"]
+			},
+			{
+				"name": "Pink",
+				"nameZH": "桃粉",
+				"list": ["linear-gradient(45deg, #ffffff, #fae1ef)", "linear-gradient(45deg, #fea894, #ff1047)"]
+			},
+			{
+				"name": "Brown",
+				"nameZH": "棕褐",
+				"list": ["linear-gradient(45deg, #ffffff, #f2e8e2)", "linear-gradient(45deg, #ca6f2e, #cb1413)"]
+			},
+			{
+				"name": "Grey",
+				"nameZH": "玄灰",
+				"list": ["linear-gradient(45deg, #ffffff, #edf0f1)", "linear-gradient(45deg, #9aadb9, #354855)"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI - v3",
+		"link": "https://www.color-ui.com/",
+		"main": 5,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#fee7e7", "#fbbcbc", "#f89090", "#f66565", "#f33a3a", "#f00f0f", "#c50c0c", "#9a0909", "#6f0707", "#430404", "#180101", "hr", "#e31c1c"]
+			},
+			{
+				"name": "Orange",
+				"list": ["#fef1e7", "#fcd8bb", "#fabe8e", "#f8a562", "#f78b36", "#f5720a", "#c95e08", "#9d4907", "#713405", "#442003", "#180b01", "hr", "#f2720d"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#fdf9e7", "#faeebc", "#f7e392", "#f4d867", "#f1cd3c", "#eec211", "#c39f0e", "#987c0b", "#6d5908", "#433605", "#181302", "hr", "#fcca00"]
+			},
+			{
+				"name": "Olive",
+				"list": ["#f6fce9", "#e6f6c1", "#d6f099", "#c7ea71", "#b7e449", "#a7de21", "#89b61b", "#6b8e15", "#4d660f", "#2f3e09", "#111603", "hr", "#a3d52a"]
+			},
+			{
+				"name": "Green",
+				"list": ["#e8fde8", "#bff9be", "#95f593", "#6cf269", "#43ee3f", "#19ea15", "#15c011", "#10960d", "#0c6c0a", "#074106", "#031702", "hr", "#43d63f"]
+			},
+			{
+				"name": "Teal",
+				"list": ["#e7fdf7", "#bcfbe9", "#91f8dc", "#66f5ce", "#3bf2c0", "#10efb2", "#0dc492", "#0a9972", "#076e52", "#044332", "#021812", "hr", "#05e1a5"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#e6feff", "#b9fbfe", "#8cf9fd", "#5ef7fc", "#31f4fc", "#04f2fb", "#03c6ce", "#039ba1", "#026f73", "#014446", "#001819", "hr", "#11daec"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#e5f5ff", "#b8e3ff", "#8ad1ff", "#5cc0ff", "#2eaeff", "#009cff", "#0080d1", "#0064a3", "#004875", "#002c47", "#00101a", "hr", "#0081ff"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#ede7fe", "#cebbfb", "#ae90f9", "#8e64f7", "#6f38f5", "#4f0df2", "#410ac7", "#33089b", "#24066f", "#160444", "#080118", "hr", "#5926d9"]
+			},
+			{
+				"name": "Mauve",
+				"list": ["#f5e9fc", "#e3c1f6", "#d299f0", "#c071ea", "#ae49e4", "#9c21de", "#801bb6", "#64158e", "#480f66", "#2c093e", "#100316", "hr", "#9b27d8"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#fce8f4", "#f8bfe0", "#f396cc", "#ef6cb8", "#ea43a5", "#e51a91", "#bc1577", "#93105d", "#690c43", "#400729", "#17030e", "hr", "#df2090"]
+			},
+			{
+				"name": "Brown",
+				"list": ["#f6f3ee", "#e7ddd0", "#d8c7b1", "#c8b193", "#b99b74", "#a98556", "#8b6d46", "#6c5537", "#4e3d27", "#2f2518", "#110d09", "hr", "#9d815e"]
+			},
+			{
+				"name": "Gray",
+				"list": ["#f2f2f2", "#dbdbdb", "#c4c4c4", "#adadad", "#969696", "#808080", "#696969", "#525252", "#3b3b3b", "#242424", "#0d0d0d", "hr", "#808080"]
+			},
+			{
+				"name": "Grey",
+				"list": ["#f0f2f5", "#d4dae2", "#b9c2d0", "#9dabbe", "#8293ab", "#667b99", "#54657d", "#414f62", "#2f3946", "#1d222b", "#0a0c0f", "hr", "#667b99"]
+			}
+		]
+	},
+
+	{
+		"name": "ColorUI GA",
+		"link": "https://xiaokanglei.github.io/ColorUI-GA-Docs/#/base/background?id=标准色",
+		"list": [
+			{
+				"name": "Red",
+				"nameZH": "嫣红",
+				"list": ["#fadbd9", "#e54d42"]
+			},
+			{
+				"name": "Orange",
+				"nameZH": "桔橙",
+				"list": ["#fde6d2", "#f37b1d"]
+			},
+			{
+				"name": "Yellow",
+				"nameZH": "明黄",
+				"list": ["#fef2ce", "#fbbd08"]
+			},
+			{
+				"name": "Olive",
+				"nameZH": "橄榄",
+				"list": ["#e8f4d9", "#8dc63f"]
+			},
+			{
+				"name": "Green",
+				"nameZH": "森绿",
+				"list": ["#d7f0db", "#3eb93b"]
+			},
+			{
+				"name": "Cyan",
+				"nameZH": "天青",
+				"list": ["#d2f1f0", "#37c0fe"]
+			},
+			{
+				"name": "Blue",
+				"nameZH": "海蓝",
+				"list": ["#cce6ff", "#0081ff"]
+			},
+			{
+				"name": "Purple",
+				"nameZH": "姹紫",
+				"list": ["#e1d7f0", "#8044de"]
+			},
+			{
+				"name": "Mauve",
+				"nameZH": "木槿",
+				"list": ["#ebd4ef", "#b745cb"]
+			},
+			{
+				"name": "Pink",
+				"nameZH": "桃粉",
+				"list": ["#f9d7ea", "#e03997"]
+			},
+			{
+				"name": "Brown",
+				"nameZH": "棕褐",
+				"list": ["#ede1d9", "#a5673f"]
+			},
+			{
+				"name": "Gray",
+				"nameZH": "草灰",
+				"list": ["#f0f0f0", "#969696"]
+			},
+			{
+				"name": "Grey",
+				"nameZH": "玄灰",
+				"list": ["#e7ebed", "#8799a3"]
+			},
+			{
+				"name": "White & Black",
+				"nameZH": "雅白 & 墨黑",
+				"list": ["#ffffff", "#0a0a0a"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI GA - 渐变",
+		"link": "https://xiaokanglei.github.io/ColorUI-GA-Docs/#/base/background?id=标准色",
+		"list": [
+			{
+				"name": "Red",
+				"list": ["linear-gradient(45deg, #ffffff, #f9d3d0)", "linear-gradient(45deg, #f43f3b, #ec008c)"]
+			},
+			{
+				"name": "Orange",
+				"list": ["linear-gradient(45deg, #ffffff, #fde6d2)", "linear-gradient(45deg, #ff9700, #ed1c24)"]
+			},
+			{
+				"name": "Green",
+				"list": ["linear-gradient(45deg, #ffffff, #cfeece)", "linear-gradient(45deg, #39b54a, #8dc63f)"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["linear-gradient(45deg, #ffffff, #cdefff)", "linear-gradient(45deg, #06edfe, #48b2fe)"]
+			},
+			{
+				"name": "Blue",
+				"list": ["linear-gradient(45deg, #ffffff, #bfe0ff)", "linear-gradient(45deg, #0081ff, #1cbbb4)"]
+			},
+			{
+				"name": "Purple",
+				"list": ["linear-gradient(45deg, #ffffff, #dfd0f7)", "linear-gradient(45deg, #9000ff, #5e00ff)"]
+			},
+			{
+				"name": "Mauve *",
+				"list": ["linear-gradient(45deg, #ffffff, #edd1f2)", "linear-gradient(45deg, #ec008c, #6739b6)"]
+			},
+			{
+				"name": "Pink *",
+				"list": ["linear-gradient(45deg, #ffffff, #f7cee5)", "linear-gradient(45deg, #fea894, #ff1047)"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI",
+		"link": "https://miren.lovemi.ren/colorui-document/pages/basics/background/",
+		"list": [
+			{
+				"name": "Red",
+				"nameZH": "嫣红",
+				"list": ["#fadbd9", "#e54d42"]
+			},
+			{
+				"name": "Orange",
+				"nameZH": "桔橙",
+				"list": ["#fde6d2", "#f37b1d"]
+			},
+			{
+				"name": "Yellow",
+				"nameZH": "明黄",
+				"list": ["#fef4d6", "#fbbd08"]
+			},
+			{
+				"name": "Olive",
+				"nameZH": "橄榄",
+				"list": ["#e8f4d9", "#8dc63f"]
+			},
+			{
+				"name": "Green",
+				"nameZH": "森绿",
+				"list": ["#d7f0db", "#39b54a"]
+			},
+			{
+				"name": "Cyan",
+				"nameZH": "天青",
+				"list": ["#d2f1f0", "#1cbbb4"]
+			},
+			{
+				"name": "Blue",
+				"nameZH": "海蓝",
+				"list": ["#cce6ff", "#0081ff"]
+			},
+			{
+				"name": "Purple",
+				"nameZH": "姹紫",
+				"list": ["#e1d7f0", "#6739b6"]
+			},
+			{
+				"name": "Mauve",
+				"nameZH": "木槿",
+				"list": ["#ebd4ef", "#9c26b0"]
+			},
+			{
+				"name": "Pink",
+				"nameZH": "桃粉",
+				"list": ["#f9d7ea", "#e03997"]
+			},
+			{
+				"name": "Brown",
+				"nameZH": "棕褐",
+				"list": ["#ede1d9", "#a5673f"]
+			},
+			{
+				"name": "Gray",
+				"nameZH": "草灰",
+				"list": ["#f0f0f0", "#aaaaaa"]
+			},
+			{
+				"name": "Grey",
+				"nameZH": "玄灰",
+				"list": ["#e7ebed", "#8799a3"]
+			},
+			{
+				"name": "White & Black",
+				"nameZH": "雅白 & 墨黑",
+				"list": ["#ffffff", "#333333"]
+			}
+		]
+	},
+	{
+		"name": "ColorUI - 渐变",
+		"link": "https://miren.lovemi.ren/colorui-document/pages/basics/background/#渐变背景",
+		"list": [
+			{
+				"name": "Red",
+				"nameZH": "魅红",
+				"list": ["linear-gradient(45deg,#f43f3b,#ec008c)"]
+			},
+			{
+				"name": "Orange",
+				"nameZH": "鎏金",
+				"list": ["linear-gradient(45deg,#ff9700,#ed1c24)"]
+			},
+			{
+				"name": "Green",
+				"nameZH": "翠柳",
+				"list": ["linear-gradient(45deg,#39b54a,#8dc63f)"]
+			},
+			{
+				"name": "Blue",
+				"nameZH": "靛青",
+				"list": ["linear-gradient(45deg,#0081ff,#1cbbb4)"]
+			},
+			{
+				"name": "Purple",
+				"nameZH": "惑紫",
+				"list": ["linear-gradient(45deg,#9000ff,#5e00ff)"]
+			},
+			{
+				"name": "Pink",
+				"nameZH": "霞彩",
+				"list": ["linear-gradient(45deg,#ec008c,#6739b6)"]
 			}
 		]
 	}
