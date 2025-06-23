@@ -6,7 +6,7 @@ export default {
 	singleQuote: true, // 优先使用单引号
 	quoteProps: 'as-needed', // 对象的 key 仅在必要时用引号
 	// jsxSingleQuote: true, //jsx中使用单引号
-	printWidth: 160, // 超过最大值换行
+	printWidth: 180, // 超过最大值换行
 	tabWidth: 4, // 每个 tab 代表几个空格数
 	useTabs: true, // 使用 tab 缩进
 
