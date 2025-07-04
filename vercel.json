@@ -21,8 +21,12 @@
 	],
 	"redirects": [
 		{
-			"source": "/demo1",
-			"destination": "/demo2"
+			"source": "/index",
+			"destination": "/"
+		},
+		{
+			"source": "/index/",
+			"destination": "/"
 		}
 	],
 	"rewrites": [
