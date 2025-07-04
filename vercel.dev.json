@@ -19,6 +19,12 @@
 			]
 		}
 	],
+	"redirects": [
+		{
+			"source": "/demo1",
+			"destination": "/demo2"
+		}
+	],
 	"rewrites": [
 		{
 			"source": "/api/doc",
@@ -31,6 +37,10 @@
 		{
 			"source": "/api/:path*/:action",
 			"destination": "/api/:path*"
+		},
+		{
+			"source": "/",
+			"destination": "/index"
 		}
 	]
 }

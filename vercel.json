@@ -19,6 +19,12 @@
 			]
 		}
 	],
+	"redirects": [
+		{
+			"source": "/demo1",
+			"destination": "/demo2"
+		}
+	],
 	"rewrites": [
 		{
 			"has": [{ "type": "host", "value": "zengjin.work" }],
@@ -39,6 +45,10 @@
 			"has": [{ "type": "host", "value": "api.zengjin.xyz" }],
 			"source": "/:path*",
 			"destination": "https://zengjin.xyz/api/:path*"
+		},
+		{
+			"source": "/",
+			"destination": "/index"
 		}
 	]
 }
