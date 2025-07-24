@@ -1,4 +1,5 @@
 window.$config = {
+	app: 'gis', 
 	title: 'GIS实例',
 	map_center: {
 		//地图初始中心点: 临沂市
