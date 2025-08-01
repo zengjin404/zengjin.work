@@ -1,5 +1,0 @@
-import"./DialogModel.vue_vue_type_style_index_0_lang-DHeZpOCy.js";import{aQ as n,bN as y,bO as p,bJ as u,m,j as g,e as b,o as h,bL as O,J as k,w as s,bK as l,ak as B,al as w,d as z,a$ as v}from"./index-dTVIleI_.js";/**
- * tdesign v1.13.2
- * (c) 2025 tdesign
- * @license MIT
- */var C=n(y);n(p);const E={__name:"DialogModel",props:{t_dialog:{type:Object,default:{}},attach_to_body:{type:Boolean,default:!1},close_easy:{type:Boolean,default:!1},size:{type:String,default:"auto"}},emits:["t_ref"],setup(r,{emit:c}){const e=r,i=c,d=["body","cancelBtn","closeBtn","confirmBtn","footer","header"].filter(a=>Object.keys(u()).includes(a)),t=m();return g(()=>{i("t_ref",t.value)}),(a,D)=>{const f=C;return h(),b(f,v({ref_key:"dialogRef",ref:t,class:"DialogModel",attach:e.attach_to_body&&"body"||null,size:e.size,footer:!1,closeOnOverlayClick:e.close_easy,closeOnEscKeydown:e.close_easy,showInAttachedElement:"",lazy:"",destroyOnClose:"",placement:"center"},e.t_dialog),O({default:s(()=>[l(a.$slots,"default")]),_:2},[k(z(d),o=>({name:o,fn:s(_=>[l(a.$slots,o,B(w(_)))])}))]),1040,["attach","size","closeOnOverlayClick","closeOnEscKeydown"])}}};export{E as _};

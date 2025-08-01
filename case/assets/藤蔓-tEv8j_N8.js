@@ -1,1 +1,0 @@
-import{_ as s,k as a,m as t,j as o,c as r,o as c,b as n}from"./index-dTVIleI_.js";const _={__name:"藤蔓",setup(p){return a({}),t(),o(()=>{}),(l,e)=>(c(),r("section",null,e[0]||(e[0]=[n("iframe",{src:"/$apps/case/动画效果/藤蔓/"},null,-1)])))}},m=s(_,[["__scopeId","data-v-5128f2e0"]]);export{m as default};

@@ -1,1 +1,0 @@
-import{_ as c,u as n,a as o,c as _,o as t,b as r,t as u,d as i,e as l}from"./index-dTVIleI_.js";const p={__name:"index",setup(s){const e=$config.title;return n(),o(),(a,d)=>(t(),_("section",null,[r("h1",null,u(i(e)),1)]))}},f=c(p,[["__scopeId","data-v-b2f24ca2"]]),x={__name:"index",setup(s){return(e,a)=>(t(),l(f))}};export{x as default};
