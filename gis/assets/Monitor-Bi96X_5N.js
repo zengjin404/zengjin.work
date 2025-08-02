@@ -1,1 +1,0 @@
-import{p as s,o as n,a as r,c as t,h as a}from"./index-nc9jXHou.js";const l={class:"Monitor"},c=["src"],_={__name:"Monitor",props:{url:{type:String,default:""}},setup(o){const e=o;return s(""),n(()=>{}),(u,p)=>(r(),t("div",l,[e.url?(r(),t("iframe",{key:0,src:`plugin/JnWebPlayer/play_url.html?url=${e.url}`},null,8,c)):a("v-if",!0)]))}};export{_ as default};

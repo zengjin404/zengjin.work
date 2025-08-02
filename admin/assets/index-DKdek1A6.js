@@ -1,0 +1,1 @@
+import{_ as t,u as s,a,c as o,o as c,b as n,t as r,d as _}from"./index-CF2ZWd0n.js";const u={__name:"index",setup(i){const e=$config.title;return s(),a(),(l,p)=>(c(),o("section",null,[n("h1",null,r(_(e)),1)]))}},f=t(u,[["__scopeId","data-v-358408c7"]]);export{f as default};

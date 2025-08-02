@@ -1,0 +1,1 @@
+import{c as o,o as t,b as n}from"./index-CF2ZWd0n.js";const r=Object.assign({name:"demo1"},{__name:"demo1",setup(l){return(s,e)=>(t(),o("section",null,e[0]||(e[0]=[n("h1",null,"demo1",-1),n("input",null,null,-1)])))}});export{r as default};
