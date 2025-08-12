@@ -1,4 +1,5 @@
 <script setup>
+import Precode from '/src/components/Precode.vue'
 const state = reactive({
 	list: [
 		{ id: 1, label: 'Item 1' },
