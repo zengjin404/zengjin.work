@@ -1,6 +1,5 @@
 <script setup>
 import Precode from '/src/components/Precode.vue'
-
 import draggable from 'vuedraggable'
 const state = reactive({
 	list: [
@@ -15,8 +14,10 @@ const state = reactive({
 <template>
 	<div class="container">
 		<pre>{{ JSON.stringify(state.list, null, 2) }}</pre>
+		<!-- 拖拽容器 -->
 		<draggable class="list" v-model="state.list" item-key="id" handle=".item_handle">
 			<template #item="{ element: item }">
+				<!-- 拖拽项 -->
 				<div class="item">
 					<label>{{ item.label }}</label>
 					<i class="fa-regular fa-grip-dots-vertical item_handle"></i>
