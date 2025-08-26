@@ -38,9 +38,29 @@ export default [
 		layer: 'vec',
 		minimumLevel: 3,
 		maximumLevel: 18,
+	},
+	{
+		name: '矢量-星图',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_vec.png',
+		type: 'xyz',
+		url: 'https://tiles{s}.geovisearth.com/base/v1/vec/{z}/{x}/{y}?token=' + $config.map_xt_key,
+		subdomains: '123',
+	},
+	{
+		name: '矢量-谷歌',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
+		type: 'google',
+		layer: 'vec',
+		// chinaCRS: mars3d.ChinaCRS.GCJ02
+	},
+	{
+		name: '矢量-ArcGIS',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_vec.png',
+		type: 'arcgis',
+		url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+		enablePickFeatures: false,
 		divider: true,
 	},
-
 	{
 		name: '卫星-天地图+高德',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
@@ -87,6 +107,8 @@ export default [
 				type: 'tdt',
 				layer: 'img_d',
 				key: $config.map_tdt_key,
+				contrast: 1.5, // 对比度
+				gamma: 1.2, // 伽马值
 			},
 			{
 				name: '注记',
@@ -97,20 +119,20 @@ export default [
 		],
 	},
 	// {
-	// 	"name": "卫星-百度",
-	// 	"icon": "https://data.mars3d.cn/img/thumbnail/basemap/bd_img.png",
-	// 	"type": "group",
-	// 	"layers": [
+	// 	name: '卫星-百度',
+	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/bd_img.png',
+	// 	type: 'group',
+	// 	layers: [
 	// 		{
-	// 			"name": "底图",
-	// 			"type": "baidu",
-	// 			"layer": "img_d"
+	// 			name: '底图',
+	// 			type: 'baidu',
+	// 			layer: 'img_d',
 	// 		},
 	// 		{
-	// 			"name": "注记",
-	// 			"type": "baidu",
-	// 			"layer": "img_z"
-	// 		}
+	// 			name: '注记',
+	// 			type: 'baidu',
+	// 			layer: 'img_z',
+	// 		},
 	// 	],
 	// },
 	{
@@ -129,25 +151,125 @@ export default [
 				layer: 'img_z',
 			},
 		],
+	},
+	{
+		name: '卫星-星图',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'group',
+		layers: [
+			{
+				name: '底图',
+				type: 'xyz',
+				url: 'https://tiles{s}.geovisearth.com/base/v1/img/{z}/{x}/{y}?token=' + $config.map_xt_key,
+				subdomains: '123',
+			},
+			{
+				name: '注记',
+				type: 'xyz',
+				url: 'https://tiles{s}.geovisearth.com/base/v1/cia/{z}/{x}/{y}?token=' + $config.map_xt_key,
+				subdomains: '123',
+			},
+		],
+	},
+	{
+		name: '卫星-谷歌',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
+		type: 'google',
+		// layer: 'img_d', //内置的URL失效时，可以按下面类似自定义其他URL的谷歌服务
+		url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=y&v=982&gl=cn&x={x}&y={y}&z={z}',
+		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 		divider: true,
 	},
 	{
 		name: '卫星底图-ArcGIS',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_img.png',
-		type: 'xyz',
-		url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+		type: 'arcgis',
+		layer: 'img_d', // 使用layer时会自动用内部固定url "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
 		enablePickFeatures: false,
 	},
+
 	{
 		name: '卫星底图-微软',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/bing_img.png',
 		type: 'bing',
 		layer: 'Aerial',
+	},
+	{
+		name: '卫星底图-谷歌',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
+		type: 'google',
+		// layer: 'img_d', //内置的URL失效时，可以按下面类似自定义其他URL的谷歌服务
+		url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=s&v=982&gl=cn&x={x}&y={y}&z={z}',
+		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 		divider: true,
 	},
 
+	// {
+	// 	name: '卫星注记-谷歌',
+	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
+	// 	type: 'google',
+	// 	url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=h&v=982&gl=cn&x={x}&y={y}&z={z}',
+	// 	// chinaCRS: mars3d.ChinaCRS.GCJ02,
+	// 	divider: true,
+	// },
 	{
-		name: '主题-静谧蓝',
+		name: '地形-天地图',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_ter.png',
+		type: 'group',
+		layers: [
+			{ name: '底图', type: 'tdt', layer: 'ter_d', key: $config.map_tdt_key },
+			{
+				name: '注记',
+				type: 'tdt',
+				layer: 'ter_z',
+				key: $config.map_tdt_key,
+				// 表示缩小和放大瓦片数据的过滤方式。默认值为LINEAR线性结构，大部分地图调整为最近方式过滤能够有效提升地图清晰度。
+				minificationFilter: Cesium.TextureMinificationFilter.NEAREST,
+				magnificationFilter: Cesium.TextureMinificationFilter.NEAREST,
+			},
+		],
+	},
+	{
+		name: '地形-谷歌',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_ter.png',
+		type: 'google',
+		layer: 'ter',
+		// chinaCRS: mars3d.ChinaCRS.GCJ02,
+	},
+	{
+		name: '地形-ArcGIS',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_vec.png',
+		type: 'arcgis',
+		url: 'https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer',
+		enablePickFeatures: false,
+		divider: true,
+	},
+	// {
+	// 	name: '微软',
+	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_img.png',
+	// 	type: 'xyz',
+
+	// 	url: 'https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}.jpeg?n=z&g=11404',
+	// 	subdomains: ['0', '1', '2', '3'],
+	// 	tilingScheme: new Cesium.WebMercatorTilingScheme(),
+	// 	customTags: {
+	// 		q: function (imageryProvider, x, y, level) {
+	// 			const result = tileXYToQuadKey(x, y, level)
+	// 			console.log(imageryProvider, x, y, level, result)
+	// 			return result
+	// 		},
+	// 		divider: true,
+	// 	},
+	// },
+	{
+		name: '主题-静谧蓝-腾讯',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_blue.png',
+		type: 'tencent',
+		layer: 'custom',
+		style: '4',
+	},
+	{
+		name: '主题-荧光蓝-高德',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_blue.png',
 		type: 'gaode',
 		layer: 'vec',
@@ -162,7 +284,7 @@ export default [
 		minimumLevel: 3,
 	},
 	{
-		name: '主题-荧光绿',
+		name: '主题-荧光绿-高德',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_green.png',
 		type: 'gaode',
 		layer: 'vec',
@@ -177,7 +299,7 @@ export default [
 		minimumLevel: 3,
 	},
 	{
-		name: '主题-午夜黑',
+		name: '主题-午夜黑-高德',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_dark.png',
 		type: 'gaode',
 		layer: 'vec',
@@ -192,6 +314,37 @@ export default [
 		minimumLevel: 3,
 		divider: true,
 	},
+	// {
+	// 	name: '主题-蓝色-ArcGIS',
+	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_blue.png',
+	// 	type: 'arcgis',
+	// 	url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+	// 	enablePickFeatures: false,
+	// 	chinaCRS: mars3d.ChinaCRS.GCJ02,
+	// 	invertColor: true,
+	// 	filterColor: '#4e70a6',
+	// 	brightness: 0.6,
+	// 	contrast: 1.8,
+	// 	gamma: 0.3,
+	// 	hue: 1,
+	// 	saturation: 0,
+	// },
+	// {
+	// 	name: '主题-灰色-ArcGIS',
+	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_dark.png',
+	// 	type: 'arcgis',
+	// 	url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+	// 	enablePickFeatures: false,
+	// 	chinaCRS: mars3d.ChinaCRS.GCJ02,
+	// 	invertColor: true,
+	// 	filterColor: '#909090',
+	// 	brightness: 0.6,
+	// 	contrast: 1.8,
+	// 	gamma: 0.3,
+	// 	hue: 1,
+	// 	saturation: 0,
+	// 	divider: true,
+	// },
 
 	{
 		name: '离线',
