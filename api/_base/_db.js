@@ -17,9 +17,11 @@ const dbConfig = {
 	idleTimeoutMillis: 30000, // 连接最大空闲时间
 }
 
+console.log('================', dbConfig)
+
 // 在生产环境中启用 SSL
 const isProd = process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production'
-console.log('当前环境:', isProd ? '生产环境' : '开发环境')
+// console.log('当前环境:', isProd ? '生产环境' : '开发环境')
 if (isProd) {
 	dbConfig.ssl = {
 		require: true,
