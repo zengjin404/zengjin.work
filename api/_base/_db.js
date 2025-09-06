@@ -15,19 +15,16 @@ const dbConfig = {
 	database: process.env.DB_NAME || 'postgres',
 	max: 15, // 连接池最大连接数
 	idleTimeoutMillis: 30000, // 连接最大空闲时间
-}
-
-console.log('================', dbConfig)
-
-// 在生产环境中启用 SSL
-const isProd = process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production'
-// console.log('当前环境:', isProd ? '生产环境' : '开发环境')
-if (isProd) {
-	dbConfig.ssl = {
+	// 始终启用 SSL，但允许自签名证书
+	ssl: {
 		require: true,
-		rejectUnauthorized: true,
-	}
+		rejectUnauthorized: false, // 设置为 false 以允许自签名证书
+	},
 }
+
+// 判断环境
+const isProd = process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production'
+console.log('当前环境:', isProd ? '生产环境' : '开发环境')
 
 const db = new Pool(dbConfig)
 export default db
