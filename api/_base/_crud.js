@@ -49,7 +49,7 @@ crud.get.select = async options => {
 			db.query(`select count(*) as total from ${table} ${whereStr}`, binds),
 		])
 
-		let total = res2?.rows?.[0]?.total || 0
+		let total = Number(res2?.rows?.[0]?.total) || 0
 		if (res?.rowCount) {
 			return base.respSuccess({
 				msg: '查询成功',
@@ -177,10 +177,10 @@ crud.post.update = async options => {
 	try {
 		const successIds = []
 		for (const id of ids) {
-			const res = await db.query(
-				`update ${table} set ${updates.map((update, i) => update.replace('?', `$${i + 1}`)).join(', ')} where id = $${updates.length + 1}`,
-				[...binds, id],
-			)
+			const res = await db.query(`update ${table} set ${updates.map((update, i) => update.replace('?', `$${i + 1}`)).join(', ')} where id = $${updates.length + 1}`, [
+				...binds,
+				id,
+			])
 			if (res?.rowCount) {
 				successIds.push(id)
 			}
