@@ -241,10 +241,10 @@ actions.post.update = async options => {
 				}
 			}
 
-			const res = await db.query(
-				`update ${table} set ${updates.map((update, i) => update.replace('?', `$${i + 1}`)).join(', ')} where id = $${updates.length + 1}`,
-				[...binds, id],
-			)
+			const res = await db.query(`update ${table} set ${updates.map((update, i) => update.replace('?', `$${i + 1}`)).join(', ')} where id = $${updates.length + 1}`, [
+				...binds,
+				id,
+			])
 			if (res?.rowCount) {
 				successIds.push(id)
 			}
