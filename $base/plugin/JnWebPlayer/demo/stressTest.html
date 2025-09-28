@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>压力测试</title>
+    <script src="../JnWebPlayer.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        body {
+            margin: 0;
+            transition: .2s;
+            font-size: 14px;
+        }
+
+        .ctrl {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: #fffc;
+            backdrop-filter: blur(2px);
+            padding: 10px 0;
+        }
+
+        .ctrl input {
+            height: 18px;
+            width: 34px;
+            border: 0;
+            border-bottom: 1px solid #0009;
+            margin: 0 3px;
+            text-align: center;
+            outline: 0;
+        }
+
+        .ctrl a {
+            color: #2962ff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 8px;
+            height: 24px;
+            line-height: 22px;
+            border-radius: 4px;
+            border: 1px solid currentColor;
+            transition: .2s;
+            margin-left: 8px;
+        }
+
+        .ctrl a:hover {
+            color: #e91e63;
+        }
+
+        .panel {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player {
+            width: 450px;
+            height: 250px;
+            border-radius: 4px;
+            background: #0002;
+        }
+    </style>
+</head>
+<body>
+
+<div class="ctrl">
+    <label>生成<input type="text" value="3">个播放器</label>
+    <a href="javascript:" onclick="do_init()">播放</a>
+</div>
+<div class="panel"></div>
+
+<script>
+	JnWebPlayer.settings.channelOrigin =  'http://192.168.1.202:8816'    //测试线
+    function do_init() {
+        let num = document.querySelector('input').value || 1
+        let panel_dom = document.querySelector('.panel')
+        panel_dom.innerHTML = ''
+
+        for (let i = 0; i < num; i++) {
+            let player_dom = document.createElement('div')
+            player_dom.className = 'player'
+            panel_dom.appendChild(player_dom)
+
+            let player = JnWebPlayer.init(player_dom, {   //初始化播放器(容器的选择器或dom, 选项)
+                loadingText: '加载中',   //加载提示, 默认'加载中'
+                rotate: 0,              //画面旋转角度, 默认0
+
+                controlAutoHide: false,  //控制栏自动隐藏, 默认false
+                showBandwidth: true, 	//是否显示网速, 默认true
+                operateBtns: {
+                    performance: true,	//是否显示性能面板按钮, 默认true
+                    scale: true,		    //是否显示填充模式按钮, 默认true
+                    audio: true,		    //是否显示声音按钮, 默认true
+                    play: true,			//是否显示播放暂停按钮, 默认true
+                    screenshot: true,	//是否显示截图按钮, 默认true
+                    record: true,		//是否显示录制按钮, 默认true
+                    zoom: true,			//是否显示电子放大, 默认true
+                    fullscreen: true,	//是否显示全屏按钮, 默认true
+                }
+            })
+
+            player.on('stats', stats => {	//逐秒监听信息(慎用)
+                console.log(player._opt.channelId)
+            })
+
+            player.play('37130200001310878512')
+        }
+    }
+</script>
+</body>
+</html>

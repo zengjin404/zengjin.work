@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>完整示例</title>
+    <script src="../JnWebPlayer.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            transition: .2s;
+            font-size: 14px;
+        }
+
+        .player {
+            width: 800px;
+            height: 400px;
+            border-radius: 4px;
+            background: #0002;
+            margin: auto;
+        }
+
+        .ctrl {
+            width: 800px;
+            margin: auto;
+        }
+
+        .ctrl div {
+            box-shadow: 0 1px #fff, inset 0 -1px #cfe1e8;
+        }
+
+        .ctrl a {
+            color: #2962ff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px;
+            border-radius: 4px;
+            transition: .2s;
+        }
+
+        .ctrl a:hover {
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+<div class="player"></div>
+<div class="ctrl">
+    <div>
+        <a href="javascript:" onclick="do_init()">初始化播放器</a>
+    </div>
+    <div>
+        <!--播放(通道id)-->
+<!--        <a href="javascript:" onclick="_player.play('37130200001310878512')">播放</a>-->
+        <a href="javascript:" onclick="_player.play('37132368001320002515')">播放</a>
+        <a href="javascript:" onclick="_player.play('37132368001320001009')">播放(另一设备)</a>
+        <a href="javascript:" onclick="_player.play('37132368001320004126')">播放(另一设备)</a>
+
+        <!--暂停(是否清除画面)-->
+        <a href="javascript:" onclick="_player.pause()">暂停</a>
+        <a href="javascript:" onclick="_player.pause(true)">暂停并清除画面</a>
+    </div>
+    <div>
+        <a href="javascript:" onclick="_player.cancelMute()">开启声音</a>
+        <a href="javascript:" onclick="_player.mute()">设置静音</a>
+
+        <!--设置音量(0~1)-->
+        <a href="javascript:" onclick="_player.setVolume(0.5)">音量50%</a>
+        <a href="javascript:" onclick="_player.setVolume(1)">音量100%</a>
+
+    </div>
+    <div>
+        <!--设置旋转角度(默认0 ，90，180，270)-->
+        <a href="javascript:" onclick="_player.setRotate(90)">旋转90度</a>
+        <a href="javascript:" onclick="_player.setRotate(180)">旋转180度</a>
+
+        <a href="javascript:" onclick="_player.setFullscreen(true)">全屏</a>
+        <a href="javascript:" onclick="_player.setFullscreen(false)">退出全屏</a>
+    </div>
+    <div>
+        <a href="javascript:" onclick="console.log(_player.getOption())">获取全部信息</a>
+    </div>
+    <div>
+        <a href="javascript:" onclick="_player.destroy()">销毁播放器</a>
+    </div>
+</div>
+
+<script>
+    // JnWebPlayer.settings.BMS =  'http://192.168.1.202:8816'    //测试线
+    JnWebPlayer.settings.BMS =  'http://172.20.96.161:8816'    //文旅正式
+
+    let _player = null  //播放器实体
+
+    function do_init() {
+        _player = JnWebPlayer.init('.player', {   //初始化播放器(容器的选择器或dom, 选项)
+            loadingText: '加载中',   //加载提示, 默认'加载中'
+            rotate: 0,              //画面旋转角度, 默认0
+
+            controlAutoHide: false,  //控制栏自动隐藏, 默认false
+            showBandwidth: true, 	//是否显示网速, 默认true
+            operateBtns: {
+                performance: true,	//是否显示性能面板按钮, 默认true
+                scale: true,		    //是否显示填充模式按钮, 默认true
+                audio: true,		    //是否显示声音按钮, 默认true
+                play: true,			//是否显示播放暂停按钮, 默认true
+                screenshot: true,	//是否显示截图按钮, 默认true
+                record: true,		//是否显示录制按钮, 默认true
+                zoom: true,			//是否显示电子放大, 默认true
+                fullscreen: true,	//是否显示全屏按钮, 默认true
+            }
+        })
+
+        _player.on('play', () => {   //监听播放
+            console.log('play')
+        })
+
+        _player.on('pause', () => {  //监听暂停
+            console.log('pause')
+        })
+
+        _player.on('stats', stats => {	//逐秒监听信息(慎用)
+            // console.log('stats-ts', stats.ts)    //时间戳
+        })
+
+        _player.on('timeUpdate', ts => {	//逐帧监听时间戳(慎用,慎用,慎用), 同stats的ts值
+            // console.log('timeUpdate', ts)
+        })
+
+        _player.on('getUrlFailed', res => {	//监听获取流地址接口报错
+            console.log('getUrlFailed', res)
+        })
+
+        _player.on('playFailedAndPaused', error => {    //监听视频流异常断开
+            console.log('playFailedAndPaused')
+        })
+    }
+</script>
+</body>
+</html>

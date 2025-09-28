@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>JnWebPlayer 示例</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				position: relative;
+			}
+
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				font-size: 14px;
+				color: #2d3748;
+			}
+
+			.layout {
+				width: 100%;
+				height: 100%;
+				display: flex;
+			}
+
+			.remind {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-bottom: 5vh;
+				font-size: 24px;
+				font-weight: 700;
+				color: #e91e63;
+				z-index: -1;
+			}
+
+			/*----------------------------*/
+
+			aside {
+				width: max-content;
+				box-shadow: 0 0 8px #1a202c33;
+				background: #fff;
+				z-index: 1;
+			}
+
+			aside h1 {
+				font-size: 20px;
+				margin: 16px;
+			}
+
+			aside a {
+				color: #2962ff;
+				text-decoration: none;
+				display: block;
+				margin: 0 8px;
+				padding: 8px;
+				border-radius: 4px;
+				transition: 0.2s;
+			}
+
+			aside a:hover {
+				color: #e91e63;
+			}
+
+			aside a.active {
+				color: #e91e63;
+				background: #fce4ec;
+			}
+
+			iframe {
+				flex: 1;
+				border: 0;
+				background: #edf2f7;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layout">
+			<aside>
+				<h1>JnWebPlayer 示例</h1>
+				<a target="iframe" class="a_url">使用流地址播放</a>
+				<a target="iframe" class="a_params">使用国标参数播放</a>
+			</aside>
+			<iframe name="iframe" src=""></iframe>
+		</div>
+
+		<div class="remind">请在服务模式下打开此页面</div>
+
+		<script>
+			;(function () {
+				// 服务校验
+				if (!location.host) {
+					document.querySelector('.layout').remove()
+					return
+				}
+
+				// 流地址赋值
+				let url = 'http://192.168.110.248:80/rtp/4D7C6E19.live.mp4'
+				document.querySelector('.a_url').setAttribute('href', `./play.html?url=${url}`)
+
+				// 国标参数赋值
+				// let params = {
+				// 	deviceId: '37130000991180000004',
+				// 	channelId: '37130000991320000001',
+				// 	name: '测试测试测试',
+				// }
+				let params = {
+					channelId: '37130135581314001581',
+					channelName: '大楼鹰眼',
+					deviceId: '37130200492000000001',
+					name: '大楼鹰眼',
+				}
+				document.querySelector('.a_params').setAttribute('href', `./play.html?params=${JSON.stringify(params)}`)
+
+				// 默认点击
+				// document.querySelector('.a_url').click()
+				document.querySelector('.a_params').click()
+			})()
+		</script>
+	</body>
+</html>
