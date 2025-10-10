@@ -42,8 +42,8 @@
 	],
 	"crons": [
 		{
-			"path": "/api/base/keepalive/run",
-			"schedule": "* * * * *"
+			"path": "/api/base/keepalive/supabase",
+			"schedule": "0 3 * * *"
 		}
 	]
 }

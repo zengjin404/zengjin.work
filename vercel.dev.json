@@ -34,11 +34,5 @@
 			"source": "/",
 			"destination": "/index"
 		}
-	],
-	"crons": [
-		{
-			"path": "/api/base/keepalive/run",
-			"schedule": "* * * * *"
-		}
 	]
 }
