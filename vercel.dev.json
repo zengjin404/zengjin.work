@@ -21,6 +21,10 @@
 	],
 	"redirects": [
 		{
+			"source": "/api/doc/swagger.json",
+			"destination": "/api/doc?__swagger_json=1"
+		},
+		{
 			"source": "/index",
 			"destination": "/"
 		},
