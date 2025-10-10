@@ -1,4 +1,4 @@
-import base from '../_base/_base.js'
+import base from '../../_base/_base.js'
 // import tencentcloud from 'tencentcloud-sdk-nodejs-tmt'
 
 const actions = {
@@ -10,7 +10,7 @@ const actions = {
 actions.post.tencent = async options => {
 	const { query, body } = options
 
-	console.log(body.text, Array.isArray(body.text), typeof body.text == 'string')
+	// console.log(body.text, Array.isArray(body.text), typeof body.text == 'string')
 
 	if (!body.text || !(Array.isArray(body.text) || typeof body.text == 'string')) {
 		return base.respFailure({
@@ -45,7 +45,7 @@ actions.post.tencent = async options => {
 		Target: body.target || 'zh',
 		SourceTextList: Array.isArray(body.text) ? body.text : [body.text],
 	}
-	console.log(11111111, params)
+	// console.log(11111111, params)
 
 	// 使用await等待翻译结果
 	try {

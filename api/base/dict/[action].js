@@ -1,6 +1,6 @@
-import db from '../_base/_db.js'
-import base from '../_base/_base.js'
-import curd from '../_base/_crud.js'
+import base from '../../_base/_base.js'
+import curd from '../../_base/_crud.js'
+import db from '../../_base/_db.js'
 // const actions = { ...curd }
 const actions = {
 	get: {},

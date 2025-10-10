@@ -31,28 +31,19 @@
 	],
 	"rewrites": [
 		{
-			"has": [{ "type": "host", "value": "zengjin.work" }],
-			"source": "/api/:path*/:action",
-			"destination": "/api/:path*"
-		},
-		{
 			"has": [{ "type": "host", "value": "api.zengjin.work" }],
 			"source": "/:path*",
 			"destination": "https://zengjin.work/api/:path*"
 		},
 		{
-			"has": [{ "type": "host", "value": "zengjin.xyz" }],
-			"source": "/api/:path*/:action",
-			"destination": "/api/:path*"
-		},
-		{
-			"has": [{ "type": "host", "value": "api.zengjin.xyz" }],
-			"source": "/:path*",
-			"destination": "https://zengjin.xyz/api/:path*"
-		},
-		{
 			"source": "/",
 			"destination": "/index"
+		}
+	],
+	"crons": [
+		{
+			"path": "/api/base/keepalive/run",
+			"schedule": "* * * * *"
 		}
 	]
 }

@@ -31,12 +31,14 @@
 	],
 	"rewrites": [
 		{
-			"source": "/api/:path*/:action",
-			"destination": "/api/:path*"
-		},
-		{
 			"source": "/",
 			"destination": "/index"
+		}
+	],
+	"crons": [
+		{
+			"path": "/api/base/keepalive/run",
+			"schedule": "* * * * *"
 		}
 	]
 }
