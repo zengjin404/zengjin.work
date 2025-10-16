@@ -15,7 +15,7 @@ let config = {
 	// },
 	plugins: [basicSsl()],
 	preview: {
-		port: 1234,
+		port: 1231,
 		host: true,
 		// https: true,
 		proxy: {
