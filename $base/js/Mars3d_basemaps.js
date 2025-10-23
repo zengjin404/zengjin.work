@@ -1,12 +1,5 @@
 export default [
 	{
-		name: '矢量-高德',
-		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
-		type: 'gaode',
-		layer: 'vec',
-		minimumLevel: 3,
-	},
-	{
 		name: '矢量-天地图',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_vec.png',
 		type: 'group',
@@ -24,6 +17,32 @@ export default [
 				key: $config.map_tdt_key,
 			},
 		],
+	},
+	{
+		name: '矢量-天地图url',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'group',
+		layers: [
+			{
+				name: '底图',
+				type: 'xyz',
+				url: `https://t{s}.tianditu.gov.cn/vec_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vec&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${$config.map_tdt_key}`,
+				subdomains: '01234567',
+			},
+			{
+				name: '注记',
+				type: 'xyz',
+				url: `https://t{s}.tianditu.gov.cn/cva_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cva&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${$config.map_tdt_key}`,
+				subdomains: '01234567',
+			},
+		],
+	},
+	{
+		name: '矢量-高德精简',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}',
+		chinaCRS: mars3d.ChinaCRS.GCJ02,
 	},
 	{
 		name: '矢量-百度',
@@ -51,14 +70,13 @@ export default [
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
 		type: 'google',
 		layer: 'vec',
-		// chinaCRS: mars3d.ChinaCRS.GCJ02
 	},
 	{
-		name: '矢量-ArcGIS',
-		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_vec.png',
-		type: 'arcgis',
-		url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-		enablePickFeatures: false,
+		name: '矢量底图-微软',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://d.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 		divider: true,
 	},
 	{
@@ -98,6 +116,27 @@ export default [
 		],
 	},
 	{
+		name: '卫星-高德url',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_img.png',
+		type: 'group',
+		layers: [
+			{
+				name: '底图',
+				type: 'xyz',
+				url: 'https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}',
+				chinaCRS: mars3d.ChinaCRS.GCJ02,
+				divider: true,
+			},
+			{
+				name: '注记',
+				type: 'xyz',
+				url: 'https://webst01.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}',
+				chinaCRS: mars3d.ChinaCRS.GCJ02,
+				divider: true,
+			},
+		],
+	},
+	{
 		name: '卫星-天地图',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
 		type: 'group',
@@ -115,6 +154,28 @@ export default [
 				type: 'tdt',
 				layer: 'img_z',
 				key: $config.map_tdt_key,
+			},
+		],
+	},
+	{
+		name: '卫星-天地图url',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'group',
+		layers: [
+			{
+				name: '底图',
+				type: 'xyz',
+				url: `https://t{s}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${$config.map_tdt_key}`,
+				subdomains: '01234567',
+				contrast: 1.5, // 对比度
+				gamma: 1.2, // 伽马值
+			},
+			{
+				name: '注记',
+				type: 'xyz',
+				url: `https://t{s}.tianditu.gov.cn/cia_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cia&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${$config.map_tdt_key}`,
+				subdomains: '01234567',
+				contrast: 1.5, // 对比度
 			},
 		],
 	},
@@ -175,32 +236,52 @@ export default [
 		name: '卫星-谷歌',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
 		type: 'google',
-		// layer: 'img_d', //内置的URL失效时，可以按下面类似自定义其他URL的谷歌服务
-		url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=y&v=982&gl=cn&x={x}&y={y}&z={z}',
-		// chinaCRS: mars3d.ChinaCRS.GCJ02,
-		divider: true,
-	},
-	{
-		name: '卫星底图-ArcGIS',
-		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_img.png',
-		type: 'arcgis',
-		layer: 'img_d', // 使用layer时会自动用内部固定url "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
-		enablePickFeatures: false,
-	},
-
-	{
-		name: '卫星底图-微软',
-		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/bing_img.png',
-		type: 'bing',
-		layer: 'Aerial',
+		layer: 'img_d', //等同于与下一句url
+		// url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=y&x={x}&y={y}&z={z}', // lys参数可选值包括：h（街道图）、m（街道图）、p（街道图）、r（街道图）、s（影像无注记）、y（影像含注记）、t（地形图）
 	},
 	{
 		name: '卫星底图-谷歌',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
 		type: 'google',
-		// layer: 'img_d', //内置的URL失效时，可以按下面类似自定义其他URL的谷歌服务
-		url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=s&v=982&gl=cn&x={x}&y={y}&z={z}',
+		layer: 'img_d', //等同于与下一句url
+		// url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=s&x={x}&y={y}&z={z}',
+	},
+	{
+		name: '卫星底图-谷歌镜像',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
+		type: 'google',
+		url: 'https://cbk.8ditu.com/maps/vt?lyrs=s&x={x}&y={y}&z={z}',
+	},
+	{
+		name: '卫星底图-ArcGIS',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png',
 		// chinaCRS: mars3d.ChinaCRS.GCJ02,
+	},
+	{
+		name: '卫星底图-吉林一号2024',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'xyz',
+		url: 'https://api.jl1mall.com/getMap/{z}/{x}/{reverseY}?mk=3ddec00f5f435270285ffc7ad1a60ce5&tk=ecb2be019119654d86558229982917e4',
+	},
+	{
+		name: '卫星底图-吉林一号2023',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'xyz',
+		url: 'https://api.jl1mall.com/getMap/{z}/{x}/{reverseY}?mk=73ad26c4aa6957eef051ecc5a15308b4&tk=ecb2be019119654d86558229982917e4',
+	},
+	{
+		name: '卫星底图-吉林一号2023全球',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'xyz',
+		url: 'https://api.jl1mall.com/getMap/{z}/{x}/{reverseY}?mk=9a4ea39e1388ae1b3733faa8557b5f42&tk=ecb2be019119654d86558229982917e4',
+	},
+	{
+		name: '卫星底图-吉林一号2022',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/tdt_img.png',
+		type: 'xyz',
+		url: 'https://api.jl1mall.com/getMap/{z}/{x}/{reverseY}?mk=bd60ffe96379e0c9cbc1be02b06e3622&tk=ecb2be019119654d86558229982917e4',
 		divider: true,
 	},
 
@@ -209,7 +290,6 @@ export default [
 	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_img.png',
 	// 	type: 'google',
 	// 	url: 'https://gac-geo.googlecnapps.club/maps/vt?lyrs=h&v=982&gl=cn&x={x}&y={y}&z={z}',
-	// 	// chinaCRS: mars3d.ChinaCRS.GCJ02,
 	// 	divider: true,
 	// },
 	{
@@ -230,37 +310,55 @@ export default [
 		],
 	},
 	{
+		name: '地形-星图',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_ter.png',
+		type: 'xyz',
+		url: 'https://tiles{s}.geovisearth.com/base/v1/ter/{z}/{x}/{y}',
+		subdomains: '123',
+	},
+	{
 		name: '地形-谷歌',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_ter.png',
 		type: 'google',
 		layer: 'ter',
-		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 	},
 	{
 		name: '地形-ArcGIS',
-		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/google_vec.png',
-		type: 'arcgis',
-		url: 'https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer',
-		enablePickFeatures: false,
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://server.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png',
+	},
+	{
+		name: '地形底图-ArcGIS',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}',
+	},
+	{
+		name: '地形底图-Smgi复古',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://smgi.com.cn:8085/tserver/wmts.ashx?t=ter_zh_m&r={y}&c={x}&l={z}',
+	},
+	{
+		name: '地形底图-Smgi淡雅',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://smgi.com.cn:8085/tserver/wmts.ashx?t=ter_dy_m&r={y}&c={x}&l={z}',
+	},
+	{
+		name: '地形底图-Smgi古典灰',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://smgi.com.cn:8085/tserver/wmts.ashx?t=ter_h_m&r={y}&c={x}&l={z}',
+	},
+	{
+		name: '地形底图-Smgi绚丽',
+		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
+		type: 'xyz',
+		url: 'https://smgi.com.cn:8085/tserver/wmts.ashx?t=ter_xl_m&r={y}&c={x}&l={z}',
 		divider: true,
 	},
-	// {
-	// 	name: '微软',
-	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/arcgis_img.png',
-	// 	type: 'xyz',
-
-	// 	url: 'https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}.jpeg?n=z&g=11404',
-	// 	subdomains: ['0', '1', '2', '3'],
-	// 	tilingScheme: new Cesium.WebMercatorTilingScheme(),
-	// 	customTags: {
-	// 		q: function (imageryProvider, x, y, level) {
-	// 			const result = tileXYToQuadKey(x, y, level)
-	// 			console.log(imageryProvider, x, y, level, result)
-	// 			return result
-	// 		},
-	// 		divider: true,
-	// 	},
-	// },
 	{
 		name: '主题-静谧蓝-腾讯',
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_blue.png',
@@ -314,38 +412,6 @@ export default [
 		minimumLevel: 3,
 		divider: true,
 	},
-	// {
-	// 	name: '主题-蓝色-ArcGIS',
-	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_blue.png',
-	// 	type: 'arcgis',
-	// 	url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-	// 	enablePickFeatures: false,
-	// 	chinaCRS: mars3d.ChinaCRS.GCJ02,
-	// 	invertColor: true,
-	// 	filterColor: '#4e70a6',
-	// 	brightness: 0.6,
-	// 	contrast: 1.8,
-	// 	gamma: 0.3,
-	// 	hue: 1,
-	// 	saturation: 0,
-	// },
-	// {
-	// 	name: '主题-灰色-ArcGIS',
-	// 	icon: 'https://data.mars3d.cn/img/thumbnail/basemap/my_dark.png',
-	// 	type: 'arcgis',
-	// 	url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-	// 	enablePickFeatures: false,
-	// 	chinaCRS: mars3d.ChinaCRS.GCJ02,
-	// 	invertColor: true,
-	// 	filterColor: '#909090',
-	// 	brightness: 0.6,
-	// 	contrast: 1.8,
-	// 	gamma: 0.3,
-	// 	hue: 1,
-	// 	saturation: 0,
-	// 	divider: true,
-	// },
-
 	{
 		name: '离线',
 		icon: '/navyblue/icon.png',
