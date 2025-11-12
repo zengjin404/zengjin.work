@@ -1273,7 +1273,45 @@
 			}
 		]
 	},
-
+	{
+		"name": "HeroUI",
+		"link": "https://www.heroui.com/docs/customization/colors",
+		"main": 5,
+		"list": [
+			{
+				"name": "Red",
+				"list": ["#FEE7EF", "#FDD0DF", "#FAA0BF", "#F871A0", "#F54180", "#F31260", "#C20E4D", "#920B3A", "#610726", "#310413"]
+			},
+			{
+				"name": "Yellow",
+				"list": ["#FEFCE8", "#FDEDD3", "#FBDBA7", "#F9C97C", "#F7B750", "#F5A524", "#C4841D", "#936316", "#62420E", "#312107"]
+			},
+			{
+				"name": "Green",
+				"list": ["#E8FAF0", "#D1F4E0", "#A2E9C1", "#74DFA2", "#45D483", "#17C964", "#12A150", "#0E793C", "#095028", "#052814"]
+			},
+			{
+				"name": "Cyan",
+				"list": ["#F0FCFF", "#E6FAFE", "#D7F8FE", "#C3F4FD", "#A5EEFD", "#7EE7FC", "#06B7DB", "#09AACD", "#0E8AAA", "#053B48"]
+			},
+			{
+				"name": "Blue",
+				"list": ["#E6F1FE", "#cce3fd", "#99C7FB", "#66AAF9", "#338EF7", "#006FEE", "#005BC4", "#004493", "#002E62", "#001731"]
+			},
+			{
+				"name": "Purple",
+				"list": ["#F2EAFA", "#E4D4F4", "#C9A9E9", "#AE7EDE", "#9353D3", "#7828C8", "#6020A0", "#481878", "#301050", "#180828"]
+			},
+			{
+				"name": "Pink",
+				"list": ["#FFEDFA", "#FFDCF5", "#FFB8EB", "#FF95E1", "#FF71D7", "#FF4ECD", "#CC3EA4", "#992F7B", "#661F52", "#331029"]
+			},
+			{
+				"name": "Zinc",
+				"list": ["#FAFAFA", "#F4F4F5", "#E4E4E7", "#D4D4D8", "#A1A1AA", "#71717A", "#52525B", "#3F3F46", "#27272A", "#18181B"]
+			}
+		]
+	},
 	{
 		"name": "Open color",
 		"main": 6,
