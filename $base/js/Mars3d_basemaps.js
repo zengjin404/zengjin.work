@@ -42,7 +42,7 @@ export default [
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
 		type: 'xyz',
 		url: 'https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}',
-		chinaCRS: mars3d.ChinaCRS.GCJ02,
+		chinaCRS: 'GCJ02',
 	},
 	{
 		name: '矢量-百度',
@@ -76,7 +76,6 @@ export default [
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
 		type: 'xyz',
 		url: 'https://d.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
-		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 		divider: true,
 	},
 	{
@@ -124,14 +123,14 @@ export default [
 				name: '底图',
 				type: 'xyz',
 				url: 'https://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}',
-				chinaCRS: mars3d.ChinaCRS.GCJ02,
+				chinaCRS: 'GCJ02',
 				divider: true,
 			},
 			{
 				name: '注记',
 				type: 'xyz',
 				url: 'https://webst01.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}',
-				chinaCRS: mars3d.ChinaCRS.GCJ02,
+				chinaCRS: 'GCJ02',
 				divider: true,
 			},
 		],
@@ -257,7 +256,6 @@ export default [
 		icon: 'https://data.mars3d.cn/img/thumbnail/basemap/gaode_vec.png',
 		type: 'xyz',
 		url: 'https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png',
-		// chinaCRS: mars3d.ChinaCRS.GCJ02,
 	},
 	{
 		name: '卫星底图-吉林一号2024',
@@ -298,15 +296,7 @@ export default [
 		type: 'group',
 		layers: [
 			{ name: '底图', type: 'tdt', layer: 'ter_d', key: $config.map_tdt_key },
-			{
-				name: '注记',
-				type: 'tdt',
-				layer: 'ter_z',
-				key: $config.map_tdt_key,
-				// 表示缩小和放大瓦片数据的过滤方式。默认值为LINEAR线性结构，大部分地图调整为最近方式过滤能够有效提升地图清晰度。
-				minificationFilter: Cesium.TextureMinificationFilter.NEAREST,
-				magnificationFilter: Cesium.TextureMinificationFilter.NEAREST,
-			},
+			{ name: '注记', type: 'tdt', layer: 'ter_z', key: $config.map_tdt_key },
 		],
 	},
 	{
