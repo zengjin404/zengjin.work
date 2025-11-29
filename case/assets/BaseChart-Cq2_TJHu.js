@@ -1,0 +1,1 @@
+import{_ as c,c as a,o as s,ax as n}from"./index-_fJD3vNH.js";const r={key:0,class:"BaseChart"},_={key:1,class:"BaseChart"},l={__name:"BaseChart",props:{canvas:{type:Boolean,default:!1}},setup(e){const t=e;return(o,p)=>t.canvas?(s(),a("canvas",r)):(s(),a("div",_,[n(o.$slots,"default",{},void 0,!0)]))}},B=c(l,[["__scopeId","data-v-c5145597"]]);export{B};

@@ -1,0 +1,1 @@
+import{_ as s,r as a,j as t,h as o,c as r,o as _,b as c}from"./index-_fJD3vNH.js";const n={__name:"水面卡通",setup(p){return a({}),t(),o(()=>{}),(l,e)=>(_(),r("section",null,[...e[0]||(e[0]=[c("iframe",{src:"/$apps/case/动画效果/水面小船/"},null,-1)])]))}},u=s(n,[["__scopeId","data-v-c16636dd"]]);export{u as default};
