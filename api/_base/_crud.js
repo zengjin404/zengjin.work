@@ -10,9 +10,9 @@ const crud = {
 crud.get.select = async options => {
 	const { table, fields, valids, joins, query, body } = options
 
-	const current = Number(query.current) || 0
-	const pageSize = Math.min(Number(query.pageSize) || 0, 100000)
-	if (current <= 0 || pageSize <= 0) {
+	const page = Number(query.page || query.current) || 0
+	const size = Math.min(Number(query.size || query.pageSize) || 0, 100000)
+	if (page <= 0 || size <= 0) {
 		return base.respFailure({
 			msg: '页码参数无效',
 		})
@@ -42,10 +42,10 @@ crud.get.select = async options => {
 	}
 
 	try {
-		const offset = (current - 1) * pageSize
+		const offset = (page - 1) * size
 
 		const [res, res2] = await Promise.all([
-			db.query(`select ${fieldStr} from ${table} ${joinStr} ${whereStr} order by ${table}.id desc limit ${pageSize} offset ${offset}`, binds),
+			db.query(`select ${fieldStr} from ${table} ${joinStr} ${whereStr} order by ${table}.id desc limit ${size} offset ${offset}`, binds),
 			db.query(`select count(*) as total from ${table} ${whereStr}`, binds),
 		])
 
