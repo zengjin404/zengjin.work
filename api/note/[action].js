@@ -1,5 +1,5 @@
-import base from './_base/_base.js'
-import crud from './_base/_crud.js'
+import base from '../_base/_base.js'
+import crud from '../_base/_crud.js'
 const actions = { ...crud }
 
 const fields = 'id,user_id,title,abstract,content,img,createtime,updatetime,toptime'.split(',')
