@@ -21,7 +21,11 @@
 	],
 	"redirects": [
 		{
-			"source": "/index(.*)",
+			"source": "/index",
+			"destination": "/"
+		},
+		{
+			"source": "/index/",
 			"destination": "/"
 		}
 	],
