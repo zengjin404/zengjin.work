@@ -33,7 +33,7 @@
 		},
 		{
 			"source": "/",
-			"destination": "/index/"
+			"destination": "/index"
 		}
 	],
 	"crons": [
