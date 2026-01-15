@@ -21,11 +21,21 @@
 	],
 	"redirects": [
 		{
-			"source": "/index:path*",
-			"destination": "/:path*"
+			"source": "/index(.*)",
+			"destination": "/"
 		}
 	],
-
+	"rewrites": [
+		{
+			"has": [{ "type": "host", "value": "api.zengjin.work" }],
+			"source": "/:path*",
+			"destination": "https://zengjin.work/api/:path*"
+		},
+		{
+			"source": "/",
+			"destination": "/index/"
+		}
+	],
 	"crons": [
 		{
 			"path": "/api/base/keepalive/supabase",
