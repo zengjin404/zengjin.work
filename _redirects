@@ -1,0 +1,2 @@
+# cloudflare pages 首页路径重写
+/  /index/index.html  200
