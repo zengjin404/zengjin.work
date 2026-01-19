@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"serve": "pnpm dlx vercel@48.2.9 dev --local-config vercel.dev.json --listen 0.0.0.0:1232",
+		"serve": "vercel dev --local-config vercel.json --listen 0.0.0.0:1232",
 		"preview": "node ./vite.preview.js"
 	},
 	"dependencies": {
@@ -21,7 +21,8 @@
 		"chalk": "^5.4.1",
 		"nodemon": "^2.0.22",
 		"prettier": "^3.5.3",
-		"vercel": "48.2.9",
+		"vercel": "^50.4.5",
 		"vite": "^6.2.3"
-	}
+	},
+	"packageManager": "bun@1.2.0"
 }
