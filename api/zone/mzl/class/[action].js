@@ -1,12 +1,14 @@
 import base from '../../../_base/_base.js'
 import curd from '../../../_base/_crud.js'
+import { requireAuth } from '../../../_base/_auth_middleware.js'
+
 const actions = { ...curd }
 
 const fields = 'id,name,leader,slogan,createtime'.split(',')
 const valids = 'name,leader'.split(',')
 const joins = {}
 
-export default async (req, resp) => {
+export default requireAuth(async (req, resp) => {
 	base.req = req
 	base.resp = resp
 	const { table, method, action, query, body } = base.getReqInfo()
@@ -25,7 +27,7 @@ export default async (req, resp) => {
 			...error,
 		})
 	}
-}
+})
 
 /**
  * @swagger

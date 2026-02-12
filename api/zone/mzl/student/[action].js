@@ -1,5 +1,7 @@
 import base from '../../../_base/_base.js'
 import curd from '../../../_base/_crud.js'
+import { requireAuth } from '../../../_base/_auth_middleware.js'
+
 const actions = { ...curd }
 
 const fields = 'id,name,sex,age,address,createtime,updatetime,class_id'.split(',')
@@ -12,7 +14,7 @@ const joins = [
 	},
 ]
 
-export default async (req, resp) => {
+export default requireAuth(async (req, resp) => {
 	base.req = req
 	base.resp = resp
 	const { table, method, action, query, body } = base.getReqInfo()
@@ -30,7 +32,7 @@ export default async (req, resp) => {
 			msg: `服务器内部错误: ${error.message}`,
 		})
 	}
-}
+})
 
 /**
  * @swagger
