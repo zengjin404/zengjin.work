@@ -50,12 +50,28 @@ export default async (req, resp) => {
 			return base.respSuccess({ msg: 'Moved' })
 		}
 
+		// 5. 物理复制
+		if (action === 'copy') {
+			const { srcKey, destKey, srcBucket = bucket, destBucket = bucket } = body
+			if (!srcKey || !destKey) return base.respFailure({ msg: 'Missing srcKey or destKey' })
+			await provider.copyFile(srcBucket, srcKey, destBucket, destKey)
+			return base.respSuccess({ msg: 'Copied' })
+		}
+
 		// 5. 修改存储类型
 		if (action === 'chtype') {
 			const { key, type } = body
 			if (!key || type == null) return base.respFailure({ msg: 'Missing key or type' })
 			await provider.changeType(bucket, key, type)
 			return base.respSuccess({ msg: 'Type Changed' })
+		}
+
+		// 6. 新建文件夹
+		if (action === 'mkdir') {
+			const { prefix } = body
+			if (!prefix) return base.respFailure({ msg: 'Missing prefix' })
+			await provider.createFolder(bucket, prefix)
+			return base.respSuccess({ msg: 'Folder Created' })
 		}
 
 		return base.respFailure({ msg: 'Action Not Found' })

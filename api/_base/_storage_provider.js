@@ -95,6 +95,25 @@ const moveFile = (srcBucketKey, srcKey, destBucketKey, destKey, options = { forc
 }
 
 /**
+ * 复制文件
+ */
+const copyFile = (srcBucketKey, srcKey, destBucketKey, destKey, options = { force: false }) => {
+	const srcBucket = getBucketName(srcBucketKey)
+	const destBucket = getBucketName(destBucketKey)
+	const bucketManager = getBucketManager()
+	return new Promise((resolve, reject) => {
+		bucketManager.copy(srcBucket, srcKey, destBucket, destKey, options, (err, respBody, respInfo) => {
+			if (err) return reject(err)
+			if (respInfo.statusCode === 200) {
+				resolve(respBody)
+			} else {
+				reject(new Error(`Qiniu Error: ${respInfo.statusCode}`))
+			}
+		})
+	})
+}
+
+/**
  * 修改存储类型
  */
 const changeType = (bucketKey, key, type) => {
@@ -112,11 +131,44 @@ const changeType = (bucketKey, key, type) => {
 	})
 }
 
+/**
+ * 创建目录 (在对象存储中通常是上传一个以 / 结尾的空文件)
+ */
+const createFolder = (bucketKey, prefix) => {
+	const bucketName = getBucketName(bucketKey)
+	const bucketManager = getBucketManager()
+	// 确保 prefix 以 / 结尾
+	const folderKey = prefix.endsWith('/') ? prefix : prefix + '/'
+	return new Promise((resolve, reject) => {
+		// 七牛云没有直接创建目录的 API，通常通过上传一个空文件或直接在上传文件时指定 key 来实现
+		// 这里我们使用 putExtra 上传一个空内容
+		const options = {
+			scope: bucketName,
+		}
+		const putPolicy = new qiniu.rs.PutPolicy(options)
+		const uploadToken = putPolicy.uploadToken(mac)
+		const config = getConfig()
+		const formUploader = new qiniu.form_up.FormUploader(config)
+		const putExtra = new qiniu.form_up.PutExtra()
+
+		formUploader.put(uploadToken, folderKey, '', putExtra, (err, respBody, respInfo) => {
+			if (err) return reject(err)
+			if (respInfo.statusCode === 200) {
+				resolve(respBody)
+			} else {
+				reject(new Error(`Qiniu Error: ${respInfo.statusCode}`))
+			}
+		})
+	})
+}
+
 export default {
 	getUploadToken,
 	listFiles,
 	deleteFile,
 	moveFile,
+	copyFile,
 	changeType,
 	getBucketName,
+	createFolder,
 }
