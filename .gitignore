@@ -180,3 +180,4 @@ out
 # vercel project
 
 .vercel
+.env*.local
