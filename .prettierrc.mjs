@@ -10,12 +10,7 @@ export default {
 	tabWidth: 4, // 每个 tab 代表几个空格数
 	useTabs: true, // 使用 tab 缩进
 
-	// 调整导入顺序
-	importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
-
 	// tailwindcss 插件, 自动调整class顺序
 	tailwindStylesheet: './_src/css/base.css',
-	plugins: ['@trivago/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
+	plugins: ['prettier-plugin-tailwindcss'],
 }
