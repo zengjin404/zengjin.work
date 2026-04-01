@@ -11,6 +11,6 @@ export default {
 	useTabs: true, // 使用 tab 缩进
 
 	// tailwindcss 插件, 自动调整class顺序
-	tailwindStylesheet: './_src/css/base.css',
+	// tailwindStylesheet: './_src/css/base.css',
 	plugins: ['prettier-plugin-tailwindcss'],
 }

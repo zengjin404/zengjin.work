@@ -36,6 +36,10 @@
 			"destination": "https://zengjin.work/api/:path*"
 		},
 		{
+			"source": "/api/:path*",
+			"destination": "/api/index.js"
+		},
+		{
 			"source": "/",
 			"destination": "/index"
 		}

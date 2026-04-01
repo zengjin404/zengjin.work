@@ -2,6 +2,9 @@
 	"name": "zengjin.work",
 	"version": "0.0.0",
 	"type": "module",
+	"imports": {
+		"#*": "./*"
+	},
 	"scripts": {
 		"serve": "vercel dev --local-config vercel.json --listen 0.0.0.0:1232",
 		"preview": "node ./vite.preview.js"
@@ -26,7 +29,7 @@
 		"nodemon": "^2.0.22",
 		"prettier": "^3.5.3",
 		"prettier-plugin-tailwindcss": "^0.7.2",
-		"vercel": "^50.28.0",
+		"vercel": "^50.35.0",
 		"vite": "^6.2.3"
 	},
 	"packageManager": "bun@1.2.0"
