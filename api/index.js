@@ -2,7 +2,7 @@ import demoHandler from './_demo.js'
 import noteHandler from './_note.js'
 import classHandler from './_zone/mzl/class.js'
 import studentHandler from './_zone/mzl/student.js'
-import loginHandler from './_base/login.js'
+import userHandler from './_base/user.js'
 import dictHandler from './_base/dict.js'
 import translateHandler from './_base/translate.js'
 import keepaliveHandler from './_base/keepalive.js'
@@ -34,8 +34,8 @@ export default async function masterHandler(req, res) {
 
 			case 'base':
 				const subModule = fullAction[1] // 例如 'login' 或者是 'dict'
-				if (subModule === 'login') {
-					return await loginHandler(req, res)
+				if (subModule === 'user') {
+					return await userHandler(req, res)
 				} else if (subModule === 'dict') {
 					return await dictHandler(req, res)
 				}else if (subModule === 'translate') {

@@ -53,3 +53,18 @@ export async function checkAuth(req, resp) {
 		return false
 	}
 }
+
+/**
+ * 要求认证的中间件包装器
+ * @param {Function} handler - 实际的处理函数
+ * @returns {Function} 包装后的处理函数
+ */
+export function requireAuth(handler) {
+	return async args => {
+		const { req, resp } = args
+		const isAuth = await checkAuth(req, resp)
+		if (isAuth) {
+			return handler(args)
+		}
+	}
+}
