@@ -6,6 +6,7 @@ import userHandler from './_base/user.js'
 import dictHandler from './_base/dict.js'
 import translateHandler from './_base/translate.js'
 import keepaliveHandler from './_base/keepalive.js'
+import storageHandler from './_base/storage.js'
 import fileHandler from './_file.js'
 import docHandler from './_doc.js'
 
@@ -15,12 +16,12 @@ export default async function masterHandler(req, res) {
 	const urlWithoutQuery = req.url.split('?')[0]
 	// 分割路径: ['','api','zone','mzl','student','select']
 	const segments = urlWithoutQuery.split('/')
-	
+
 	// segment[2] 必定是顶级模块名如 'demo', 'note', 'zone'
 	const targetModule = segments[2]
 	// array 的截取获得后面的动作 ['mzl', 'student', 'select']
 	const fullAction = segments.slice(2)
-	
+
 	// 把 action 参数挂在 req.query 上，完美兼容内部 _demo 等已经成型的结构
 	req.query.action = fullAction
 
@@ -28,7 +29,7 @@ export default async function masterHandler(req, res) {
 		switch (targetModule) {
 			case 'note':
 				return await noteHandler(req, res)
-			
+
 			case 'demo':
 				return await demoHandler(req, res)
 
@@ -38,10 +39,12 @@ export default async function masterHandler(req, res) {
 					return await userHandler(req, res)
 				} else if (subModule === 'dict') {
 					return await dictHandler(req, res)
-				}else if (subModule === 'translate') {
+				} else if (subModule === 'translate') {
 					return await translateHandler(req, res)
-				}else if (subModule === 'keepalive') {
+				} else if (subModule === 'keepalive') {
 					return await keepaliveHandler(req, res)
+				} else if (subModule === 'storage') {
+					return await storageHandler(req, res)
 				}
 				return res.status(404).json({ error: `base 基础网关拦截: 未识别或未挂载的业务模块 '${subModule}'` })
 
@@ -50,7 +53,7 @@ export default async function masterHandler(req, res) {
 
 			case 'doc':
 				return await docHandler(req, res)
-				
+
 			case 'zone':
 				const zoneName = fullAction[1] // 'mzl'
 				const entity = fullAction[2] // 'class' 或 'student'
